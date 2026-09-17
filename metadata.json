@@ -1,0 +1,6 @@
+{
+  "name": "SELLERSTOP",
+  "description": "Premium imported, trending, and viral products catalog by Ishan Aggarwal. Order via WhatsApp & Phone across India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
