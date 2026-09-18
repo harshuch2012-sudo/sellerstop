@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Product } from '../types';
 import { PRODUCTS_DATA } from '../data/products';
 import { getProductWhatsAppUrl } from '../utils/whatsapp';
-import { Sparkles, Zap, Flame, Heart, MessageCircle, ArrowRight, Check } from 'lucide-react';
+import { Sparkles, Zap, Flame, Heart, MessageCircle, ArrowRight, Check, Cookie, Gift } from 'lucide-react';
 
 interface InteractiveMatcherProps {
   onViewProduct: (product: Product) => void;
@@ -16,6 +16,13 @@ export const InteractiveMatcher: React.FC<InteractiveMatcherProps> = ({
 }) => {
   const vibes = [
     {
+      id: 'spicy-munch',
+      label: "Lay's & Kurkure Crunch",
+      icon: Flame,
+      description: "Fiery Kurkure Masala Munch and Lay's India's Magic Masala bursting with authentic Indian chatpata spices.",
+      productId: 'lays-magic-masala',
+    },
+    {
       id: 'viral-sweet',
       label: 'Late-Night Sweet Crunch',
       icon: Sparkles,
@@ -23,25 +30,39 @@ export const InteractiveMatcher: React.FC<InteractiveMatcherProps> = ({
       productId: 'dubai-kunafa-chocolate',
     },
     {
+      id: 'festive-box',
+      label: 'Festive Cadbury Gift Hamper',
+      icon: Gift,
+      description: 'Royal purple and gold luxury box filled with Dairy Milk, 5 Star, Perk, and Gems celebrations.',
+      productId: 'cadbury-celebrations-gift-box',
+    },
+    {
+      id: 'chai-nostalgia',
+      label: 'Tea Time Chai & Biscuits',
+      icon: Cookie,
+      description: 'Iconic Parle-G glucose biscuits & Britannia Marie Gold baked golden for the ultimate hot tea immersion.',
+      productId: 'parle-g-glucose-biscuits',
+    },
+    {
+      id: 'hunger-buster',
+      label: 'Peanut & Caramel Snickers',
+      icon: Heart,
+      description: 'Hearty roasted peanuts, golden buttery caramel, and soft fluffy nougat wrapped in milk chocolate.',
+      productId: 'snickers-peanut-caramel-bar',
+    },
+    {
+      id: 'high-energy',
+      label: 'High-Octane Energy & Colas',
+      icon: Zap,
+      description: 'Potent Taurine, Caffeine, and Vitamin B-Complex in an ice-cold electric citrus fizz.',
+      productId: 'campa-energy-drink',
+    },
+    {
       id: 'luxury-scent',
       label: 'Opulent Sillage & Agarwood',
       icon: Flame,
       description: 'Deep royal Cambodian agarwood, saffron, and smoked amber with 14-hour longevity.',
       productId: 'belivita-oud-royal',
-    },
-    {
-      id: 'high-energy',
-      label: 'Hydration & Clean Caffeine',
-      icon: Zap,
-      description: 'Zero added sugar, 10% coconut water, and essential BCAAs in iconic tropical flavors.',
-      productId: 'prime-hydration-drink',
-    },
-    {
-      id: 'k-beauty',
-      label: 'Glass Skin Radiance',
-      icon: Heart,
-      description: '96.3% Snail secretion filtrate for deep barrier repair, instant soothing, and hydrated glow.',
-      productId: 'cosrx-snail-mucin-essence',
     },
   ];
 
@@ -71,7 +92,7 @@ export const InteractiveMatcher: React.FC<InteractiveMatcherProps> = ({
         </div>
 
         {/* Vibe Option Buttons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3.5 mb-10 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 max-w-5xl mx-auto">
           {vibes.map((vibe) => {
             const Icon = vibe.icon;
             const isSelected = vibe.id === selectedVibeId;

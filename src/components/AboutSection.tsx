@@ -55,7 +55,7 @@ export const AboutSection: React.FC = () => {
                 <strong className="text-amber-400 font-semibold">{BUSINESS_INFO.name}</strong> was born out of a passion to bridge the gap between worldwide trending sensations and consumers in India.
               </p>
               <p>
-                Whether it is the viral <strong className="text-white">Dubai Kunafa Pistachio Chocolate</strong>, the ultra-rare flavors of <strong className="text-white">Prime Hydration</strong>, imported <strong className="text-white">Monster Energy Ultra</strong> batches, the artisanal luxury of <strong className="text-white">Belivita Perfumes</strong>, or acclaimed Korean skincare cult staples—we curate each drop with obsession.
+                Whether it is the viral <strong className="text-white">Dubai Kunafa Pistachio Chocolate</strong>, the mouth-melting swirl of <strong className="text-white">Cadbury Dairy Milk Silk &amp; Silk Oreo</strong>, high-octane <strong className="text-white">Campa Power Energy</strong>, imported <strong className="text-white">Monster Energy &amp; Thai Red Bull</strong> cans, or the artisanal luxury of <strong className="text-white">Belivita Perfumes</strong>—we curate each drop with obsession.
               </p>
               <p className="text-neutral-400 text-sm">
                 We believe in straightforward, transparent commerce without robotic checkout pages or hidden charges. You speak directly with our team on WhatsApp or phone, confirm availability, verify batch photos, and receive swift Pan-India tracked dispatch.

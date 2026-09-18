@@ -3,23 +3,45 @@ import { Product, CategoryInfo } from '../types';
 // Original Authentic Studio Photography
 import dubaiKunafaImg from '../assets/images/dubai_kunafa_choc_1789658771229.jpg';
 import belivitaOudRoyalImg from '../assets/images/belivita_oud_royal_1789658788765.jpg';
-import primeHydrationImg from '../assets/images/prime_hydration_ice_1789658805977.jpg';
-import takisFuegoImg from '../assets/images/takis_fuego_snack_1789658821534.jpg';
 import feastablesImg from '../assets/images/feastables_bar_1789658841938.jpg';
 import dairyMilkSilkImg from '../assets/images/dairy_milk_silk_bar_1789659780641.jpg';
-import cosrxSnailImg from '../assets/images/cosrx_snail_essence_1789658882350.jpg';
 import belivitaVelvetAmberImg from '../assets/images/belivita_velvet_amb_1789658900530.jpg';
 import calypsoLemonadeImg from '../assets/images/calypso_ocean_blue_1789658916001.jpg';
 import kitkatClassicImg from '../assets/images/kitkat_classic_fingers_1789659796732.jpg';
-import beautyJoseonSunImg from '../assets/images/beauty_joseon_sun_1789658982461.jpg';
 import belivitaAquaRomaImg from '../assets/images/belivita_aqua_roma_1789659001766.jpg';
 import redBullSummerImg from '../assets/images/red_bull_summer_1789659035911.jpg';
 import belivitaNoirSantalImg from '../assets/images/belivita_noir_san_1789659053317.jpg';
+
 // Diverse Monster Energy Flavors & Thailand Red Bull
 import monsterMangoLocoImg from '../assets/images/monster_mango_loco_1789664808199.jpg';
 import monsterPipelinePunchImg from '../assets/images/monster_pipeline_punch_1789664822562.jpg';
 import thailandRedBullImg from '../assets/images/thailand_red_bull_1789664835582.jpg';
 import monsterUltraWhiteImg from '../assets/images/monster_ultra_white_1789664848745.jpg';
+
+// Newly Added Silk Chocolates, Milkybar, Campa Energy & Colas
+import cadburySilkOreoImg from '../assets/images/cadbury_silk_oreo_1789730275096.jpg';
+import cadburySilkBubblyImg from '../assets/images/cadbury_silk_bubbly_1789730288358.jpg';
+import milkybarWhiteImg from '../assets/images/milkybar_white_choc_1789730300452.jpg';
+import campaEnergyImg from '../assets/images/campa_energy_drink_1789730312269.jpg';
+import cocaColaClassicImg from '../assets/images/coca_cola_classic_1789730324313.jpg';
+import dietCokeImg from '../assets/images/diet_coke_can_1789730337882.jpg';
+
+// Iconic Indian & Global Biscuits, Chocolates & Celebrations
+import parleGBiscuitImg from '../assets/images/parle_g_biscuit_1789731789591.jpg';
+import marieGoldBiscuitImg from '../assets/images/marie_gold_biscuit_1789731810577.jpg';
+import nutrichoiceBiscuitImg from '../assets/images/nutrichoice_biscuit_1789731826133.jpg';
+import nestleMunchBarImg from '../assets/images/nestle_munch_bar_1789731841507.jpg';
+import snickersChocBarImg from '../assets/images/snickers_choc_bar_1789731861132.jpg';
+import cadburyGemsPackImg from '../assets/images/cadbury_gems_pack_1789731879504.jpg';
+import cadburyCelebrationsBoxImg from '../assets/images/cadbury_celebrations_box_1789731899903.jpg';
+
+// Kurkure & Lay's Iconic Chips & Savory Snacks
+import kurkureMasalaMunchImg from '../assets/images/kurkure_masala_munch_1789732835492.jpg';
+import kurkureGreenChutneyImg from '../assets/images/kurkure_green_chutney_1789732911784.jpg';
+import laysMagicMasalaImg from '../assets/images/lays_magic_masala_1789732851941.jpg';
+import laysCreamOnionImg from '../assets/images/lays_cream_onion_1789732870377.jpg';
+import laysTomatoTangoImg from '../assets/images/lays_tomato_tango_1789732883152.jpg';
+import laysClassicSaltedImg from '../assets/images/lays_classic_salted_1789732898229.jpg';
 
 export const BUSINESS_INFO = {
   name: 'SELLERSTOP',
@@ -33,7 +55,7 @@ export const BUSINESS_INFO = {
   instagramHandle: '@sellerstop_',
   instagramUrl: 'https://instagram.com/sellerstop_',
   orderingNotice: 'Order on Call & WhatsApp • Instant Personal Assistance',
-  catalogNotice: '100% Curated Viral Beverages, Imported Chocolates & Luxury Perfumes',
+  catalogNotice: '100% Curated Viral Beverages, Silk Chocolates & Luxury Perfumes',
 };
 
 // Inspiring Curator Thoughts & Quotes from Ishan Aggarwal
@@ -47,7 +69,7 @@ export const CURATOR_THOUGHTS = [
   },
   {
     id: 2,
-    quote: "A true viral product isn't a gimmick—it's a cultural artifact. From the audible snap of warm Dubai knafeh chocolate to the 14-hour sillage of Belivita agarwood.",
+    quote: "From the audible snap of warm Dubai knafeh chocolate and silky melt of Cadbury Silk Oreo to the crisp carbonation of ice-cold colas and Thai Red Bull, each item is a cultural icon.",
     author: "Ishan Aggarwal",
     role: "Curator's Manifesto",
     tag: "Authentic Quality"
@@ -70,12 +92,44 @@ export const CURATOR_THOUGHTS = [
 
 export const CATEGORIES_DATA: CategoryInfo[] = [
   {
-    id: 'energy-beverages',
-    name: 'Energy & Beverages',
-    tagline: 'Imported energy cans, hydration drinks & rare sodas',
-    iconName: 'Zap',
-    image: primeHydrationImg,
+    id: 'chips-namkeen',
+    name: "Lay's Chips & Kurkure",
+    tagline: 'Magic Masala, Cream & Onion, Tomato Tango & Masala Munch',
+    iconName: 'Flame',
+    image: laysMagicMasalaImg,
+    count: 6,
+  },
+  {
+    id: 'biscuits-bakery',
+    name: 'Biscuits & Tea Treats',
+    tagline: 'Parle-G, Britannia Marie Gold & NutriChoice Digestive',
+    iconName: 'Cookie',
+    image: parleGBiscuitImg,
+    count: 3,
+  },
+  {
+    id: 'silk-chocolates',
+    name: 'Silk & White Chocolates',
+    tagline: 'Cadbury Silk Oreo, Silk Bubbly, Milkybar & Velvet bars',
+    iconName: 'Sparkles',
+    image: cadburySilkOreoImg,
     count: 4,
+  },
+  {
+    id: 'chocolates-snacks',
+    name: 'Gourmet Chocolates & Treats',
+    tagline: 'Cadbury Celebrations, Munch, Snickers, Gems & Dubai Kunafa',
+    iconName: 'Cookie',
+    image: cadburyCelebrationsBoxImg,
+    count: 7,
+  },
+  {
+    id: 'energy-beverages',
+    name: 'Energy & Colas',
+    tagline: 'Campa Energy, Coca-Cola Classic, Diet Coke, Monster & Thai Red Bull',
+    iconName: 'Zap',
+    image: campaEnergyImg,
+    count: 7,
   },
   {
     id: 'belivita',
@@ -94,139 +148,365 @@ export const CATEGORIES_DATA: CategoryInfo[] = [
     count: 4,
   },
   {
-    id: 'chocolates-snacks',
-    name: 'Chocolates & Snacks',
-    tagline: 'Viral Dubai kunafa bars, imported chips & treats',
-    iconName: 'Cookie',
-    image: dubaiKunafaImg,
-    count: 4,
-  },
-  {
-    id: 'personal-care',
-    name: 'Personal Care',
-    tagline: 'Korean skincare cult favorites & high-end grooming',
-    iconName: 'Heart',
-    image: cosrxSnailImg,
-    count: 3,
-  },
-  {
     id: 'imported',
     name: 'Imported Exclusives',
     tagline: 'Directly sourced hard-to-find global drops',
     iconName: 'Globe',
-    image: dairyMilkSilkImg,
-    count: 6,
+    image: monsterMangoLocoImg,
+    count: 8,
   },
   {
     id: 'trending',
     name: 'Trending Products',
     tagline: 'Viral social media sensations and community favorites',
     iconName: 'TrendingUp',
-    image: monsterMangoLocoImg,
-    count: 8,
+    image: cadburySilkBubblyImg,
+    count: 12,
   },
 ];
 
 export const PRODUCTS_DATA: Product[] = [
-  // 1. PRIME HYDRATION DRINK
+  // 1. CADBURY DAIRY MILK SILK OREO
   {
-    id: 'prime-hydration-drink',
-    name: 'Prime Hydration Drink',
-    brand: 'Prime by Logan Paul & KSI',
-    category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
-    shortDescription: '10% Coconut water electrolyte beverage with zero added sugar and intense tropical punch.',
-    description: 'Imported directly for high-energy hydration. Infused with BCAAs, antioxidants, and essential electrolytes. One of the most sought-after drinks worldwide.',
-    image: primeHydrationImg,
+    id: 'cadbury-silk-oreo',
+    name: 'Cadbury Dairy Milk Silk Oreo Chocolate Bar',
+    brand: 'Cadbury Dairy Milk Silk',
+    category: 'silk-chocolates',
+    categoryLabel: 'Silk & White Chocolates',
+    shortDescription: 'Velvety smooth Dairy Milk Silk chocolate loaded with real crunchy vanilla cream Oreo cookie bites.',
+    description: 'The ultimate dream combination of two legendary confectionery favorites. Thick, meltingly smooth Cadbury Dairy Milk Silk chocolate encases generous chunks of genuine Oreo cookies with sweet vanilla cream filling. Every bite delivers a thrilling contrast between silkiness and cookie crunch.',
+    image: cadburySilkOreoImg,
     images: [
-      primeHydrationImg,
-      calypsoLemonadeImg
+      cadburySilkOreoImg,
+      cadburySilkBubblyImg,
+      dairyMilkSilkImg,
     ],
-    badges: ['Imported', 'Trending', 'Zero Sugar'],
+    badges: ['Silk Signature', 'Best Seller', 'Oreo Crunch'],
     isBestSeller: true,
     isTrending: true,
     variants: {
-      name: 'Flavors',
-      options: ['Ice Pop', 'Meta Moon', 'Blue Raspberry', 'Tropical Punch', 'Strawberry Watermelon'],
+      name: 'Size / Pack',
+      options: ['130g Standard Silk Bar', 'Pack of 2 Bars', 'Silk Oreo Celebration Box'],
     },
     details: {
-      origin: 'USA / UK Import',
-      size: '500ml Bottle',
-      flavorNotes: 'Refreshing fruit blend, electrolyte blast',
-      highlights: ['10% Coconut Water', '250mg BCAAs', 'B-Vitamins & Antioxidants'],
+      origin: 'Cadbury Authentic Master Confectionery',
+      size: '130g Bar',
+      flavorNotes: 'Rich cream milk chocolate paired with dark cocoa Oreo biscuit and sweet vanilla cream',
+      highlights: ['Authentic Oreo Cookie Pieces', '100% Certified Sustainable Cocoa', 'Thermal Cool-Pack Dispatch'],
     },
   },
 
-  // 2. MONSTER ULTRA WHITE ZERO
+  // 2. CADBURY DAIRY MILK SILK BUBBLY
+  {
+    id: 'cadbury-silk-bubbly',
+    name: 'Cadbury Dairy Milk Silk Bubbly Aerated Bar',
+    brand: 'Cadbury Dairy Milk Silk',
+    category: 'silk-chocolates',
+    categoryLabel: 'Silk & White Chocolates',
+    shortDescription: 'Playful domed aerated bubbles of Silk chocolate that burst with lighter-than-air melt.',
+    description: 'Cadbury Dairy Milk Silk Bubbly has that same smooth Silk taste you adore, but crafted into an innovative, playful aerated texture. The whimsical round bubbles on the outside hide delicate micro-bubbles inside, creating an instantaneous melt-in-the-mouth sensation unlike any ordinary bar.',
+    image: cadburySilkBubblyImg,
+    images: [
+      cadburySilkBubblyImg,
+      cadburySilkOreoImg,
+      dairyMilkSilkImg,
+    ],
+    badges: ['Aerated Texture', 'Top Trending', 'Silky Delight'],
+    isTrending: true,
+    isBestSeller: true,
+    variants: {
+      name: 'Size / Pack',
+      options: ['120g Bubbly Bar', 'Twin Pack (2 x 120g)', 'Silk Assortment Hamper'],
+    },
+    details: {
+      origin: 'Cadbury Authentic Master Confectionery',
+      size: '120g Bar',
+      flavorNotes: 'Warm vanilla milk cocoa with bubbly aerated melting texture',
+      highlights: ['Iconic Bubble Shape', 'Pure Cocoa Butter & Cream Milk', 'Dispatched with Thermal Gel Packs'],
+    },
+  },
+
+  // 3. NESTLE MILKYBAR CREAMY WHITE CHOCOLATE
+  {
+    id: 'nestle-milkybar-white-chocolate',
+    name: 'Nestle Milkybar Creamy White Chocolate Bar',
+    brand: 'Nestle Milkybar',
+    category: 'silk-chocolates',
+    categoryLabel: 'Silk & White Chocolates',
+    shortDescription: 'Classic creamy white chocolate bar crafted with rich milk goodness and zero artificial colors.',
+    description: 'The golden childhood memory and world-favorite creamy white chocolate. Made with high milk solids and cocoa butter to achieve a decadent, nostalgic sweetness. Silky, melt-in-mouth ivory squares with the pure taste of condensed milk.',
+    image: milkybarWhiteImg,
+    images: [
+      milkybarWhiteImg,
+      cadburySilkOreoImg,
+    ],
+    badges: ['Pure Milk Goodness', 'White Chocolate', 'Classic'],
+    isBestSeller: true,
+    variants: {
+      name: 'Pack Options',
+      options: ['Classic 80g Bar', 'Family 150g Giant Bar', 'Pack of 3 Sharing Pack'],
+    },
+    details: {
+      origin: 'Nestle Confectionery Original',
+      size: '80g / 150g Bar',
+      flavorNotes: 'Rich condensed milk, sweet creamy dairy butter, smooth vanilla',
+      highlights: ['No Artificial Flavors or Colors', 'High Calcium Milk Solids', 'Fresh Batch Guaranteed'],
+    },
+  },
+
+  // 4. CADBURY DAIRY MILK SILK CLASSIC & NUTS
+  {
+    id: 'cadbury-dairy-milk-silk',
+    name: 'Cadbury Dairy Milk Silk Chocolate Bar',
+    brand: 'Cadbury Original',
+    category: 'silk-chocolates',
+    categoryLabel: 'Silk & White Chocolates',
+    shortDescription: 'Unspeakably smooth and creamy milk chocolate with the signature melt-in-mouth Silk swirl.',
+    description: 'The gold standard of indulgent chocolate in India. Crafted with glass-and-a-half rich cream milk and velvety cocoa butter, giving you that iconic softer, smoother, silkier chocolate delight.',
+    image: dairyMilkSilkImg,
+    images: [
+      dairyMilkSilkImg,
+      cadburySilkOreoImg,
+      cadburySilkBubblyImg,
+    ],
+    badges: ['Silky Smooth', 'All-Time Favorite', 'Original Recipe'],
+    isTrending: true,
+    isBestSeller: true,
+    variants: {
+      name: 'Silk Varieties',
+      options: ['Silk Classic (150g)', 'Silk Roast Almond (143g)', 'Silk Fruit & Nut (137g)', 'Silk Hazelnut (143g)', 'Silk Mousse (116g)'],
+    },
+    details: {
+      origin: 'Cadbury Authentic Master Batch',
+      size: '150g Giant Bar',
+      flavorNotes: 'Rich cream milk chocolate with buttery melt-in-mouth Silk swirl',
+      highlights: ['100% Pure Cocoa Butter & Cream Milk', 'Insulated Cool-Pack Dispatch', 'Signature Silk Velvet Texture'],
+    },
+  },
+
+  // 5. CAMPA POWER ENERGY DRINK
+  {
+    id: 'campa-energy-drink',
+    name: 'Campa Power Energy Drink (Chilled Can)',
+    brand: 'Campa (Reliance)',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'High-octane Indian energy powerhouse packed with Taurine, Caffeine & Vitamin B Complex.',
+    description: 'The roaring resurgence of Campa, engineered specifically for high-intensity vitality and focus. Blended with a potent energy core of Taurine, Caffeine, and essential B-vitamins in a striking black & electric-neon aluminum can. Delivers an invigorating rush without the heavy chemical aftertaste.',
+    image: campaEnergyImg,
+    images: [
+      campaEnergyImg,
+      cocaColaClassicImg,
+      dietCokeImg,
+    ],
+    badges: ['High Octane', 'B-Complex', 'Viral Hit'],
+    isNewArrival: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Options',
+      options: ['250ml Single Chilled Can', 'Pack of 4 Power Pack', 'Case of 12 Party Crate'],
+    },
+    details: {
+      origin: 'Campa India Original',
+      size: '250ml Sleek Can',
+      flavorNotes: 'Zesty electric citrus and berry notes with crisp carbonated rush',
+      highlights: ['Taurine & High Caffeine Boost', 'B-Vitamin Complex (B2, B3, B6, B12)', 'Fast Energy Replenishment'],
+    },
+  },
+
+  // 6. COCA-COLA CLASSIC CHILLED CAN
+  {
+    id: 'coca-cola-classic',
+    name: 'Coca-Cola Classic Original Taste (Chilled Can)',
+    brand: 'Coca-Cola Original',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'The timeless, crisp, ice-cold caramel cola that refreshes like no other drink in the world.',
+    description: 'The world’s most iconic beverage in its ultimate format: the cold aluminum can. Formulated with authentic secret recipe botanicals and crisp carbonation. Dispatched chilled or temperature-guarded so you can crack open that unmistakable fizz anytime.',
+    image: cocaColaClassicImg,
+    images: [
+      cocaColaClassicImg,
+      dietCokeImg,
+      campaEnergyImg,
+    ],
+    badges: ['Original Taste', 'Classic Fizz', 'Always Chilled'],
+    isBestSeller: true,
+    variants: {
+      name: 'Size / Pack',
+      options: ['330ml Classic Can', 'Pack of 6 Fridge Pack', 'Case of 24 Chilled Tray'],
+    },
+    details: {
+      origin: 'Coca-Cola Authentic Batch',
+      size: '330ml Can',
+      flavorNotes: 'Crisp effervescent caramel, warm vanilla undertones and citrus zest',
+      highlights: ['Authentic Original Formula', 'Intense Carbonation Crispness', '100% Recyclable Aluminum Can'],
+    },
+  },
+
+  // 7. DIET COKE CRISP SILVER CAN
+  {
+    id: 'diet-coke-zero-sugar',
+    name: 'Diet Coke Crisp Silver Can (Zero Sugar & Calories)',
+    brand: 'The Coca-Cola Company',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'Distinctive, lighter, crisp cola taste with zero sugar, zero calories, and maximum refreshment.',
+    description: 'The cult-classic silver can. Diet Coke has its own unique, lighter flavor profile with crisp carbonation that stands apart from standard cola. Zero sugar, zero calories, but 100% unapologetic refreshment for long work sessions or hot afternoons.',
+    image: dietCokeImg,
+    images: [
+      dietCokeImg,
+      cocaColaClassicImg,
+      campaEnergyImg,
+    ],
+    badges: ['Zero Sugar', 'Zero Calories', 'Silver Can'],
+    isTrending: true,
+    isBestSeller: true,
+    variants: {
+      name: 'Size / Pack',
+      options: ['330ml Silver Can', 'Pack of 4 Slim Cans', 'Case of 12 Fridge Stocker'],
+    },
+    details: {
+      origin: 'Authentic Coca-Cola Import / Batch',
+      size: '330ml Silver Can',
+      flavorNotes: 'Bright, lighter effervescent cola with snappy zero-sugar finish',
+      highlights: ['0 Calories & 0g Sugar', 'Crisp Signature Taste', 'Guaranteed Cold & Dent-Free Dispatch'],
+    },
+  },
+
+  // 8. MONSTER ENERGY MANGO LOCO
+  {
+    id: 'monster-energy-mango-loco',
+    name: 'Monster Energy Mango Loco Juicy Energy',
+    brand: 'Monster Energy Juice',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'Heavenly blend of exotic tropical mango juices in an iconic Mexican Dia de los Muertos blue can.',
+    description: 'A heavenly blend of exotic mango, guava, and passion fruit juices crazy enough to attract the attention of the night. Wrapped in artwork inspired by the Mexican Day of the Dead skeleton culture.',
+    image: monsterMangoLocoImg,
+    images: [
+      monsterMangoLocoImg,
+      monsterPipelinePunchImg,
+      thailandRedBullImg,
+      monsterUltraWhiteImg,
+    ],
+    badges: ['Fan Favorite', 'Real Fruit Juice', 'Original Art Can'],
+    isTrending: true,
+    isBestSeller: true,
+    variants: {
+      name: 'Size',
+      options: ['500ml Single Can', 'Pack of 2', 'Collector 4-Pack'],
+    },
+    details: {
+      origin: 'Overseas Import Batch',
+      size: '500ml Can',
+      flavorNotes: 'Ripe luscious mango puree with tropical passionfruit kick',
+      highlights: ['Intricate Calavera Art Can', 'Packed with Real Tropical Juices', 'Full Monster Energy Blend'],
+    },
+  },
+
+  // 9. MONSTER PIPELINE PUNCH TROPICAL
+  {
+    id: 'monster-pipeline-punch',
+    name: 'Monster Energy Pipeline Punch Tropical',
+    brand: 'Monster Energy Juice',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'The perfect tropical blend of passion fruit, orange, and guava with the iconic Monster energy punch in a hot pink can.',
+    description: 'Named after the legendary Banzai Pipeline surf reef in Oahu, Hawaii. Crafted with 16% real fruit juices (passionfruit, orange, guava, apple, and pineapple) blended with full Monster energy for an explosive tropical wave.',
+    image: monsterPipelinePunchImg,
+    images: [
+      monsterPipelinePunchImg,
+      monsterMangoLocoImg,
+      monsterUltraWhiteImg
+    ],
+    badges: ['Top Flavored', 'Hawaiian Juiced', 'Imported Can'],
+    isTrending: true,
+    isBestSeller: true,
+    variants: {
+      name: 'Size / Edition',
+      options: ['500ml Import Can', 'Pack of 2', 'Pack of 4 Collector Box'],
+    },
+    details: {
+      origin: 'European / Overseas Import',
+      size: '500ml Can',
+      flavorNotes: 'Exotic Hawaiian passionfruit, juicy orange, and sweet tropical guava',
+      highlights: ['16% Real Fruit Juice Blend', '160mg Taurine & Caffeine Kick', 'Collectible Hot Pink Can'],
+    },
+  },
+
+  // 10. THAILAND RED BULL KRATING DAENG GOLD
+  {
+    id: 'thailand-red-bull-krating-daeng',
+    name: 'Thailand Red Bull Krating Daeng Gold',
+    brand: 'Red Bull Thailand (TC Pharma)',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'Original authentic non-carbonated Thai Red Bull in the iconic gold can with twin clashing bulls.',
+    description: 'The original formula created by Chaleo Yoovidhya in Thailand that started the global energy drink revolution. Non-carbonated, sweet, rich in Taurine, Inositol, and essential B-vitamins for prolonged focus without bloating.',
+    image: thailandRedBullImg,
+    images: [
+      thailandRedBullImg,
+      monsterMangoLocoImg,
+      monsterPipelinePunchImg
+    ],
+    badges: ['Authentic Thai', 'Rare Import', 'Original Formula'],
+    isNewArrival: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Options',
+      options: ['250ml Gold Can', 'Pack of 3 Thai Cans', 'Case of 6 Collector Pack'],
+    },
+    details: {
+      origin: 'Bangkok, Thailand (Direct Import)',
+      size: '250ml Gold Tin Can',
+      flavorNotes: 'Smooth un-carbonated sweet berry-citrus with intense energy vitality',
+      highlights: ['Original 1976 Krating Daeng Recipe', 'High Taurine & Inositol Ratio', 'Iconic Twin Clashing Bulls Graphic'],
+    },
+  },
+
+  // 11. MONSTER ULTRA WHITE ZERO
   {
     id: 'monster-ultra-white',
     name: 'Monster Energy Ultra White Zero Sugar',
     brand: 'Monster Energy Ultra',
     category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
-    shortDescription: 'Crisp, refreshing light citrus flavor with zero sugar, zero calories, and tactile frosted textured can.',
-    description: 'The global benchmark for zero-calorie sustained energy. Features the legendary Monster energy blend with a lighter, smoother citrus profile in a tactile frosted textured silver can.',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'Zero sugar, zero calories, light citrus flavor in the iconic textured silver collector can.',
+    description: 'Unleash the Ultra Beast! A lighter-tasting, less sweet, zero calorie citrus energy drink wrapped in a stunning tactile frosted white and silver can.',
     image: monsterUltraWhiteImg,
     images: [
       monsterUltraWhiteImg,
+      monsterMangoLocoImg,
       monsterPipelinePunchImg,
-      monsterMangoLocoImg
     ],
-    badges: ['Zero Sugar', 'Original Import', 'Zero Calorie'],
-    isBestSeller: true,
+    badges: ['Zero Sugar', 'Zero Calorie', 'Collector Can'],
+    isTrending: true,
     variants: {
-      name: 'Edition',
-      options: ['Ultra White (Citrus Zero)', 'Mango Loco Juice', 'Pipeline Punch Tropical'],
+      name: 'Size',
+      options: ['500ml Single Can', 'Pack of 2 Cans', 'Case of 4'],
     },
     details: {
-      origin: 'Authentic Overseas Import',
+      origin: 'Overseas Import',
       size: '500ml Can',
-      flavorNotes: 'Sparkling sweet-tart crisp citrus with zero sugar',
-      highlights: ['160mg Caffeine', 'Taurine, Ginseng & L-Carnitine', 'Zero Sugar & Zero Calories'],
+      flavorNotes: 'Crisp light citrus with sparkling refreshing finish',
+      highlights: ['0g Sugar & 0 Calories', 'Full Ultra Energy Blend', 'Tactile Embossed Can Texture'],
     },
   },
 
-  // 3. RED BULL SUMMER EDITION
+  // 12. CALYPSO LEMONADE
   {
-    id: 'red-bull-summer-edition',
-    name: 'Red Bull Special Summer Edition',
-    brand: 'Red Bull',
-    category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
-    shortDescription: 'Rare exotic seasonal release featuring Curuba & Elderflower with alpine taurine.',
-    description: 'Imported European batch seasonal Red Bull. Crisp floral sweetness combined with exotic sour curuba fruit to vitalize body and mind.',
-    image: redBullSummerImg,
-    images: [
-      redBullSummerImg,
-      monsterUltraWhiteImg
-    ],
-    badges: ['Limited Edition', 'Imported'],
-    isNewArrival: true,
-    variants: {
-      name: 'Flavor',
-      options: ['Curuba Elderflower (Summer)', 'Juneberry (Sea Blue)', 'Apricot Strawberry'],
-    },
-    details: {
-      origin: 'Austria / Europe Import',
-      size: '250ml Slim Can',
-      flavorNotes: 'Exotic curuba and blooming elderflower notes',
-      highlights: ['Alpine Spring Water', 'High quality B-group vitamins', 'Natural sugars'],
-    },
-  },
-
-  // 4. CALYPSO OCEAN BLUE LEMONADE
-  {
-    id: 'calypso-ocean-blue-lemonade',
+    id: 'calypso-lemonade',
     name: 'Calypso Ocean Blue Lemonade',
     brand: 'Calypso USA',
     category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
+    categoryLabel: 'Energy & Colas',
     shortDescription: 'Real lemon bits with triple-berry flavor in an iconic heavy glass bottle.',
     description: 'The original lemonade maker from Milwaukee, USA. Crafted with authentic fruit bits and natural sugar cane in heavy embossed glass.',
     image: calypsoLemonadeImg,
     images: [
       calypsoLemonadeImg,
-      primeHydrationImg
+      campaEnergyImg,
+      cocaColaClassicImg,
     ],
     badges: ['USA Import', 'Trending'],
     isTrending: true,
@@ -242,7 +522,92 @@ export const PRODUCTS_DATA: Product[] = [
     },
   },
 
-  // 5. BELIVITA OUD ROYAL
+  // 14. VIRAL DUBAI KUNAFA PISTACHIO CHOCOLATE
+  {
+    id: 'dubai-kunafa-chocolate',
+    name: 'Viral Dubai Kunafa Pistachio Chocolate Bar',
+    brand: 'Fix Dessert Chocolatier Style',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Gourmet Chocolates',
+    shortDescription: 'Thick Belgian milk chocolate stuffed with crunchy roasted kataifi pastry and creamy green pistachio tahini.',
+    description: 'The worldwide internet phenomenon in its freshest batch. Every bite explodes with audible crunch and smooth, nutty pistachio cream.',
+    image: dubaiKunafaImg,
+    images: [
+      dubaiKunafaImg,
+      feastablesImg
+    ],
+    badges: ['Viral Sensation', 'Top Trending', 'Handcrafted'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Flavors',
+      options: ['Original Pistachio Kunafa', 'Lotus Biscoff Kunafa', 'Dark Chocolate Pistachio'],
+    },
+    details: {
+      origin: 'UAE / Dubai Style',
+      size: '200g Giant Bar',
+      flavorNotes: 'Crunchy golden butter kataifi pastry, pure roasted pistachios',
+      highlights: ['Shipped in Insulated Cold Wrap', 'Viral TikTok sensation', 'Extra Thick Chocolate Shell'],
+    },
+  },
+
+  // 15. KITKAT CLASSIC ORIGINAL
+  {
+    id: 'kitkat-classic-original',
+    name: 'Nestle KitKat Classic 4-Finger Milk Chocolate',
+    brand: 'Nestle Original',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Gourmet Chocolates',
+    shortDescription: 'Classic 4-finger crispy baked wafers enveloped in smooth, rich milk chocolate.',
+    description: 'The iconic international favorite. Crisp, light wafer fingers covered in creamy milk chocolate that snaps with clean satisfaction. Have a break, have a KitKat!',
+    image: kitkatClassicImg,
+    images: [
+      kitkatClassicImg,
+      dairyMilkSilkImg
+    ],
+    badges: ['Classic Original', 'Top Pick', 'Pure Milk Chocolate'],
+    isBestSeller: true,
+    variants: {
+      name: 'Pack Options',
+      options: ['Classic 4-Finger (Pack of 3)', 'Family Share Pack (8 Bars)', 'King Size 4-Finger'],
+    },
+    details: {
+      origin: 'Original Nestle Batch',
+      size: '4-Finger Bar / 45g each',
+      flavorNotes: 'Crisp light wafer layered with creamy milk chocolate coating',
+      highlights: ['Iconic Snap & Crisp Texture', '100% Certified Sustainable Cocoa', 'Fresh Batch Guarantee'],
+    },
+  },
+
+  // 16. FEASTABLES MRBEAST BAR
+  {
+    id: 'feastables-mrbeast-bar',
+    name: 'Feastables MrBeast Milk Chocolate',
+    brand: 'Feastables by MrBeast',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Gourmet Chocolates',
+    shortDescription: 'Only 5 simple plant-based ingredients crafted into velvety grass-fed milk chocolate.',
+    description: 'Directly sourced American batch Feastables. Created by MrBeast to redefine chocolate with clean, ridiculously delicious cocoa.',
+    image: feastablesImg,
+    images: [
+      feastablesImg,
+      dubaiKunafaImg
+    ],
+    badges: ['Trending', 'Simple Ingredients'],
+    isTrending: true,
+    variants: {
+      name: 'Flavor',
+      options: ['Milk Chocolate', 'Deez Nutz (Peanut Butter)', 'Crunch (Puffed Rice)', 'Dark Chocolate Sea Salt'],
+    },
+    details: {
+      origin: 'USA Import',
+      size: '60g Bar',
+      flavorNotes: 'Rich cocoa butter and creamy milk balance',
+      highlights: ['Grass-fed Milk', 'Non-GMO', 'No Artificial Flavors'],
+    },
+  },
+
+  // 17. BELIVITA OUD ROYAL
   {
     id: 'belivita-oud-royal',
     name: 'Belivita Oud Royal — Extrait de Parfum',
@@ -272,7 +637,7 @@ export const PRODUCTS_DATA: Product[] = [
     },
   },
 
-  // 6. BELIVITA VELVET AMBER
+  // 18. BELIVITA VELVET AMBER
   {
     id: 'belivita-velvet-amber',
     name: 'Belivita Velvet Amber',
@@ -301,7 +666,7 @@ export const PRODUCTS_DATA: Product[] = [
     },
   },
 
-  // 7. BELIVITA AQUA DI ROMA
+  // 19. BELIVITA AQUA DI ROMA
   {
     id: 'belivita-aqua-di-roma',
     name: 'Belivita Aqua Di Roma',
@@ -330,7 +695,7 @@ export const PRODUCTS_DATA: Product[] = [
     },
   },
 
-  // 8. BELIVITA NOIR SANTAL
+  // 20. BELIVITA NOIR SANTAL
   {
     id: 'belivita-noir-santal',
     name: 'Belivita Noir Santal',
@@ -358,291 +723,335 @@ export const PRODUCTS_DATA: Product[] = [
     },
   },
 
-  // 9. VIRAL DUBAI KUNAFA PISTACHIO CHOCOLATE
+  // 21. PARLE-G ORIGINAL GLUCOSE BISCUITS
   {
-    id: 'dubai-kunafa-chocolate',
-    name: 'Viral Dubai Kunafa Pistachio Chocolate Bar',
-    brand: 'Fix Dessert Chocolatier Style',
-    category: 'chocolates-snacks',
-    categoryLabel: 'Chocolates & Snacks',
-    shortDescription: 'Thick Belgian milk chocolate stuffed with crunchy roasted kataifi pastry and creamy green pistachio tahini.',
-    description: 'The worldwide internet phenomenon in its freshest batch. Every bite explodes with audible crunch and smooth, nutty pistachio cream.',
-    image: dubaiKunafaImg,
-    images: [
-      dubaiKunafaImg,
-      feastablesImg
-    ],
-    badges: ['Viral Sensation', 'Top Trending', 'Handcrafted'],
-    isBestSeller: true,
-    isTrending: true,
-    variants: {
-      name: 'Flavors',
-      options: ['Original Pistachio Kunafa', 'Lotus Biscoff Kunafa', 'Dark Chocolate Pistachio'],
-    },
-    details: {
-      origin: 'UAE / Dubai Style',
-      size: '200g Giant Bar',
-      flavorNotes: 'Crunchy golden butter kataifi pastry, pure roasted pistachios',
-      highlights: ['Shipped in Insulated Cold Wrap', 'Viral TikTok sensation', 'Extra Thick Chocolate Shell'],
-    },
-  },
-
-  // 10. TAKIS FUEGO TORTILLA CHIPS
-  {
-    id: 'takis-fuego-tortilla-chips',
-    name: 'Takis Fuego Hot Chili Pepper & Lime',
-    brand: 'Barcel Mexico',
-    category: 'chocolates-snacks',
-    categoryLabel: 'Chocolates & Snacks',
-    shortDescription: 'Rolled corn tortilla chips covered in mouth-watering fiery habanero and zesty tangy lime dust.',
-    description: 'The ultimate spicy snack with an unmatched cult following. Rolled tight for maximum crunch and intense coating.',
-    image: takisFuegoImg,
-    images: [
-      takisFuegoImg
-    ],
-    badges: ['Imported USA', 'Spicy Favorite'],
+    id: 'parle-g-glucose-biscuits',
+    name: 'Parle-G Original Glucose Biscuits',
+    brand: 'Parle',
+    category: 'biscuits-bakery',
+    categoryLabel: 'Biscuits & Snacks',
+    shortDescription: 'The timeless iconic Indian glucose biscuits, crisp and golden baked for the ultimate hot chai dip.',
+    description: 'Filled with the wholesome goodness of wheat and milk, Parle-G has been India’s favorite tea-time biscuit for decades. Crispy, golden, and packed with glucose energy, every pack brings pure nostalgia.',
+    image: parleGBiscuitImg,
+    images: [parleGBiscuitImg],
+    badges: ['Iconic Classic', 'Best with Chai', 'Pure Nostalgia'],
     isBestSeller: true,
     isTrending: true,
     variants: {
       name: 'Pack Size',
-      options: ['280g Mega Bag', '92g Grab Bag'],
+      options: ['Family Pack (800g)', 'Value Pack (250g)', 'Snack Pack (130g)'],
     },
     details: {
-      origin: 'USA / Mexico Import',
-      size: '280g / 9.9oz',
-      flavorNotes: 'Extreme chili pepper heat with zesty lime finish',
-      highlights: ['Authentic Barcel Import', 'Rolled Crunchy Texture', 'Signature Purple Bag'],
+      origin: 'Parle Products, India',
+      size: '130g - 800g Family Pack',
+      flavorNotes: 'Toasted golden wheat, caramelized glucose malt, gentle vanilla sweetness',
+      highlights: ['Wholesome wheat & milk nourishment', 'Zero trans-fat', 'Perfect crispness for chai immersion'],
     },
   },
 
-  // 11. FEASTABLES MRBEAST BAR
+  // 22. BRITANNIA MARIE GOLD
   {
-    id: 'feastables-mrbeast-bar',
-    name: 'Feastables MrBeast Milk Chocolate',
-    brand: 'Feastables by MrBeast',
-    category: 'chocolates-snacks',
-    categoryLabel: 'Chocolates & Snacks',
-    shortDescription: 'Only 5 simple plant-based ingredients crafted into velvety grass-fed milk chocolate.',
-    description: 'Directly sourced American batch Feastables. Created by MrBeast to redefine chocolate with clean, ridiculously delicious cocoa.',
-    image: feastablesImg,
-    images: [
-      feastablesImg,
-      dubaiKunafaImg
-    ],
-    badges: ['Trending', 'Simple Ingredients'],
+    id: 'britannia-marie-gold',
+    name: 'Britannia Marie Gold Crisp Tea Biscuits',
+    brand: 'Britannia',
+    category: 'biscuits-bakery',
+    categoryLabel: 'Biscuits & Snacks',
+    shortDescription: 'Light, crisp, and low-calorie classic tea companion fortified with 10 essential vitamins and minerals.',
+    description: 'Britannia Marie Gold is the quintessential Indian tea-time biscuit. Delicate, crisp, and golden baked with sun-ripened wheat, it is specially designed to dip cleanly without breaking into your steaming cup of chai.',
+    image: marieGoldBiscuitImg,
+    images: [marieGoldBiscuitImg],
+    badges: ['Tea-Time Essential', '10 Vitamins', 'Light & Crispy'],
+    isBestSeller: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Super Saver 1kg', 'Twin Pack (500g)', 'Classic Pack (250g)'],
+    },
+    details: {
+      origin: 'Britannia Industries, India',
+      size: '250g - 1kg Super Saver',
+      flavorNotes: 'Crisp roasted wheat, gentle sweetness, clean snap finish',
+      highlights: ['Fortified with 10 Essential Vitamins', 'Light & guilt-free low calorie crunch', 'Zero trans fat & cholesterol'],
+    },
+  },
+
+  // 23. BRITANNIA NUTRCHOICE HI-FIBRE DIGESTIVE
+  {
+    id: 'britannia-nutrichoice-digestive',
+    name: 'Britannia NutriChoice Hi-Fibre Digestive Biscuits',
+    brand: 'Britannia NutriChoice',
+    category: 'biscuits-bakery',
+    categoryLabel: 'Biscuits & Snacks',
+    shortDescription: 'Wholesome 100% whole wheat and dietary bran digestive biscuits for mindful everyday health.',
+    description: 'Made with coarse dietary fiber and whole wheat grain, NutriChoice Digestive delivers sustained crunch and satiety. An ideal wholesome pairing with green tea, black coffee, or afternoon work breaks.',
+    image: nutrichoiceBiscuitImg,
+    images: [nutrichoiceBiscuitImg],
+    badges: ['Hi-Fibre', 'Whole Wheat', 'Smart Choice'],
     isTrending: true,
     variants: {
-      name: 'Flavor',
-      options: ['Milk Chocolate', 'Deez Nutz (Peanut Butter)', 'Crunch (Puffed Rice)', 'Dark Chocolate Sea Salt'],
+      name: 'Pack Size',
+      options: ['Mega Pack 1kg', 'Family Pack (600g)', 'Standard Pack (250g)'],
     },
     details: {
-      origin: 'USA Import',
-      size: '60g Bar',
-      flavorNotes: 'Rich cocoa butter and creamy milk balance',
-      highlights: ['Grass-fed Milk', 'Non-GMO', 'No Artificial Flavors'],
+      origin: 'Britannia Industries, India',
+      size: '250g - 1kg Mega Pack',
+      flavorNotes: 'Hearty coarse wheat bran, nutty roasted grain, subtle malt sweetness',
+      highlights: ['High in natural dietary fibre', 'No artificial colors', 'Aids smooth digestive wellness'],
     },
   },
 
-  // 12. KITKAT CLASSIC ORIGINAL
+  // 24. NESTLE MUNCH CRUNCHY WAFER BAR
   {
-    id: 'kitkat-classic-original',
-    name: 'Nestle KitKat Classic 4-Finger Milk Chocolate',
-    brand: 'Nestle Original',
+    id: 'nestle-munch-crunchy-bar',
+    name: 'Nestle Munch Crunchy Wafer Chocolate Bar',
+    brand: 'Nestle',
     category: 'chocolates-snacks',
-    categoryLabel: 'Chocolates & Snacks',
-    shortDescription: 'Classic 4-finger crispy baked wafers enveloped in smooth, rich milk chocolate.',
-    description: 'The iconic international favorite. Crisp, light wafer fingers covered in creamy milk chocolate that snaps with clean satisfaction. Have a break, have a KitKat!',
-    image: kitkatClassicImg,
-    images: [
-      kitkatClassicImg,
-      dairyMilkSilkImg
-    ],
-    badges: ['Classic Original', 'Top Pick', 'Pure Milk Chocolate'],
+    categoryLabel: 'Chocolates & Treats',
+    shortDescription: 'Mega-crispy light wafer layers coated in velvety smooth milk chocolate for an unbeatable crunch.',
+    description: 'Experience the signature "Munch Crunch." Multi-layered delicate baked wafer sheets enrobed in a delicious chocolate coating. Light on the stomach, high on crisp indulgence.',
+    image: nestleMunchBarImg,
+    images: [nestleMunchBarImg],
+    badges: ['Mega Crunch', 'Indian Favorite', 'Bestseller'],
     isBestSeller: true,
+    isTrending: true,
     variants: {
-      name: 'Pack Options',
-      options: ['Classic 4-Finger (Pack of 3)', 'Family Share Pack (8 Bars)', 'King Size 4-Finger'],
+      name: 'Bundle Size',
+      options: ['Mega Box (Box of 24 Bars)', 'Family Share Pack (Pack of 8)', 'Jumbo Bar (32g)'],
     },
     details: {
-      origin: 'Original Nestle Batch',
-      size: '4-Finger Bar / 45g each',
-      flavorNotes: 'Crisp light wafer layered with creamy milk chocolate coating',
-      highlights: ['Iconic Snap & Crisp Texture', '100% Certified Sustainable Cocoa', 'Fresh Batch Guarantee'],
+      origin: 'Nestle India',
+      size: 'Single Bar to Box of 24',
+      flavorNotes: 'Crispy wafer, rich cocoa cream, silky milk chocolate finish',
+      highlights: ['Signature audible crunch', 'Multi-layer aerated wafer texture', 'Perfect quick mid-day energy boost'],
     },
   },
 
-  // 13. COSRX SNAIL MUCIN ESSENCE
+  // 25. SNICKERS PEANUT & CARAMEL CHOCOLATE BAR
   {
-    id: 'cosrx-snail-mucin-essence',
-    name: 'COSRX Advanced Snail 96 Mucin Power Essence',
-    brand: 'COSRX Korea',
-    category: 'personal-care',
-    categoryLabel: 'Personal Care',
-    shortDescription: '96.3% Snail secretion filtrate for deep cellular hydration, soothing redness, and glass-skin glow.',
-    description: 'The world’s most celebrated Korean skincare product. Lightweight fast-absorbing essence that repairs the skin barrier without stickiness.',
-    image: cosrxSnailImg,
-    images: [
-      cosrxSnailImg,
-      beautyJoseonSunImg
-    ],
-    badges: ['K-Beauty Cult', 'Best Seller'],
+    id: 'snickers-peanut-caramel-bar',
+    name: 'Snickers Peanut & Caramel Milk Chocolate Bar',
+    brand: 'Snickers',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Chocolates & Treats',
+    shortDescription: 'Roasted crunchy peanuts, rich gooey caramel, and fluffy nougat wrapped in creamy milk chocolate.',
+    description: 'You’re not you when you’re hungry. The world’s top hunger-busting candy bar loaded with real roasted peanuts, soft nougat, and thick caramel under a generous blanket of milk chocolate.',
+    image: snickersChocBarImg,
+    images: [snickersChocBarImg],
+    badges: ['Hunger Buster', 'Real Peanuts', 'Global Bestseller'],
     isBestSeller: true,
+    isTrending: true,
     variants: {
       name: 'Size',
-      options: ['100ml Standard', 'Dual Essence 80ml'],
+      options: ['King Size Bar (50g)', 'Pack of 5 Bars', 'Minis Share Pouch (150g)'],
     },
     details: {
-      origin: 'South Korea Import',
-      size: '100ml Pump Bottle',
-      flavorNotes: 'Fragrance-free, hypoallergenic clear gel essence',
-      highlights: ['96.3% Snail Secretion Filtrate', 'Dermatologist Tested', 'Glass Skin Glow'],
+      origin: 'Mars Wrigley',
+      size: '50g Single / Pack of 5',
+      flavorNotes: 'Freshly roasted peanuts, buttery golden caramel, soft nougat, milk chocolate',
+      highlights: ['Packed with protein-rich peanuts', 'Substantial hunger satisfaction', 'Original global formulation'],
     },
   },
 
-  // 14. BEAUTY OF JOSEON SUNSCREEN
+  // 26. CADBURY GEMS COLORFUL CHOCOLATE BUTTONS
   {
-    id: 'beauty-of-joseon-sunscreen',
-    name: 'Beauty of Joseon Relief Sun: Rice + Probiotics SPF50+',
-    brand: 'Beauty of Joseon',
-    category: 'personal-care',
-    categoryLabel: 'Personal Care',
-    shortDescription: '30% Rice extract organic sunscreen with zero white cast and skin-nourishing fermented grains.',
-    description: 'Viral Korean sunscreen loved for feeling like a gentle daily moisturizer. Dewy, non-greasy, and broad-spectrum chemical SPF50+ PA++++ protection.',
-    image: beautyJoseonSunImg,
-    images: [
-      beautyJoseonSunImg,
-      cosrxSnailImg
-    ],
-    badges: ['Trending', 'Korean Import'],
-    isTrending: true,
-    variants: {
-      name: 'Pack',
-      options: ['Single 50ml Tube', 'Twin Pack (2 x 50ml)'],
-    },
-    details: {
-      origin: 'South Korea Import',
-      size: '50ml Tube',
-      flavorNotes: 'Weightless lotion texture with zero white cast',
-      highlights: ['SPF 50+ PA++++ Certified', 'Rice Germ Extracts & Probiotics', 'Reef Safe Formula'],
-    },
-  },
-
-  // 15. MONSTER PIPELINE PUNCH TROPICAL
-  {
-    id: 'monster-pipeline-punch',
-    name: 'Monster Energy Pipeline Punch Tropical',
-    brand: 'Monster Energy Juice',
-    category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
-    shortDescription: 'The perfect tropical blend of passion fruit, orange, and guava with the iconic Monster energy punch in a hot pink can.',
-    description: 'Named after the legendary Banzai Pipeline surf reef in Oahu, Hawaii. Crafted with 16% real fruit juices (passionfruit, orange, guava, apple, and pineapple) blended with full Monster energy for an explosive tropical wave.',
-    image: monsterPipelinePunchImg,
-    images: [
-      monsterPipelinePunchImg,
-      monsterMangoLocoImg,
-      monsterUltraWhiteImg
-    ],
-    badges: ['Top Flavored', 'Hawaiian Juiced', 'Imported Can'],
-    isTrending: true,
-    isBestSeller: true,
-    variants: {
-      name: 'Size / Edition',
-      options: ['500ml Import Can', 'Pack of 2', 'Pack of 4 Collector Box'],
-    },
-    details: {
-      origin: 'European / Overseas Import',
-      size: '500ml Can',
-      flavorNotes: 'Exotic Hawaiian passionfruit, juicy orange, and sweet tropical guava',
-      highlights: ['16% Real Fruit Juice Blend', '160mg Taurine & Caffeine Kick', 'Collectible Hot Pink Can'],
-    },
-  },
-
-  // 16. CADBURY DAIRY MILK SILK CHOCOLATE
-  {
-    id: 'cadbury-dairy-milk-silk',
-    name: 'Cadbury Dairy Milk Silk Chocolate Bar',
-    brand: 'Cadbury Original',
+    id: 'cadbury-gems-chocolate-buttons',
+    name: 'Cadbury Gems Colorful Chocolate Buttons',
+    brand: 'Cadbury',
     category: 'chocolates-snacks',
-    categoryLabel: 'Chocolates & Snacks',
-    shortDescription: 'Unspeakably smooth and creamy milk chocolate with the signature melt-in-mouth Silk swirl.',
-    description: 'The gold standard of indulgent chocolate in India. Crafted with glass-and-a-half rich cream milk and velvety cocoa butter, giving you that iconic softer, smoother, silkier chocolate delight.',
-    image: dairyMilkSilkImg,
-    images: [
-      dairyMilkSilkImg,
-      kitkatClassicImg
-    ],
-    badges: ['Silky Smooth', 'All-Time Favorite', 'Original Recipe'],
+    categoryLabel: 'Chocolates & Treats',
+    shortDescription: 'Vibrant crispy candy-shelled chocolate buttons filled with real creamy Cadbury milk chocolate.',
+    description: 'Pure joy in colorful crunchy buttons. Cadbury Gems feature crisp rainbow candy shells enclosing authentic Dairy Milk chocolate centers. Pop them one by one or decorate cakes and ice creams.',
+    image: cadburyGemsPackImg,
+    images: [cadburyGemsPackImg],
+    badges: ['Rainbow Crunch', 'Cadbury Core', 'Nostalgic Classic'],
     isTrending: true,
-    isBestSeller: true,
     variants: {
-      name: 'Silk Varieties',
-      options: ['Silk Classic (150g)', 'Silk Roast Almond (143g)', 'Silk Fruit & Nut (137g)', 'Silk Oreo (130g)', 'Silk Bubbly (120g)'],
+      name: 'Pack Type',
+      options: ['Surprise Ball / Tube (42g)', 'Family Mega Pouch (150g)', 'Party Box (Pack of 12)'],
     },
     details: {
-      origin: 'Cadbury Authentic Master Batch',
-      size: '150g Giant Bar',
-      flavorNotes: 'Rich cream milk chocolate with buttery melt-in-mouth Silk swirl',
-      highlights: ['100% Pure Cocoa Butter & Cream Milk', 'Insulated Cool-Pack Dispatch', 'Signature Silk Velvet Texture'],
+      origin: 'Cadbury India',
+      size: '42g Tube / 150g Pouch',
+      flavorNotes: 'Crisp sugar shell crunch, rich melt-in-mouth milk chocolate',
+      highlights: ['Vibrant multi-color candy shells', 'Authentic Cadbury chocolate inside', 'Loved by children and grown-ups alike'],
     },
   },
 
-  // 17. THAILAND RED BULL KRATING DAENG GOLD
+  // 27. CADBURY CELEBRATIONS RICH CHOCOLATE GIFT BOX
   {
-    id: 'thailand-red-bull-krating-daeng',
-    name: 'Thailand Red Bull Krating Daeng Gold',
-    brand: 'Red Bull Thailand (TC Pharma)',
-    category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
-    shortDescription: 'Original authentic non-carbonated Thai Red Bull in the iconic gold can with twin clashing bulls.',
-    description: 'The original formula created by Chaleo Yoovidhya in Thailand that started the global energy drink revolution. Non-carbonated, sweet, rich in Taurine, Inositol, and essential B-vitamins for prolonged focus without bloating.',
-    image: thailandRedBullImg,
-    images: [
-      thailandRedBullImg,
-      monsterMangoLocoImg,
-      monsterPipelinePunchImg
-    ],
-    badges: ['Authentic Thai', 'Rare Import', 'Original Formula'],
-    isNewArrival: true,
+    id: 'cadbury-celebrations-gift-box',
+    name: 'Cadbury Celebrations Rich Chocolate Gift Pack',
+    brand: 'Cadbury Celebrations',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Chocolates & Gifting',
+    shortDescription: 'Royal festive gift box containing an assortment of Dairy Milk, 5 Star, Perk, and Gems chocolate treats.',
+    description: 'Kuch meetha ho jaye. The timeless Indian gift box of joy, happiness, and celebrations. Encased in a luxurious royal purple and golden festive box, this gift hamper includes favorite Cadbury chocolates to share with loved ones.',
+    image: cadburyCelebrationsBoxImg,
+    images: [cadburyCelebrationsBoxImg],
+    badges: ['Festive Gifting', 'Assorted Hamper', 'Luxury Box'],
+    isBestSeller: true,
     isTrending: true,
     variants: {
-      name: 'Pack Options',
-      options: ['250ml Gold Can', 'Pack of 3 Thai Cans', 'Case of 6 Collector Pack'],
+      name: 'Gift Box Size',
+      options: ['Grand Celebrations (286g)', 'Festive Assortment (130g)', 'Silk Special Hamper'],
     },
     details: {
-      origin: 'Bangkok, Thailand (Direct Import)',
-      size: '250ml Gold Tin Can',
-      flavorNotes: 'Smooth un-carbonated sweet berry-citrus with intense energy vitality',
-      highlights: ['Original 1976 Krating Daeng Recipe', 'High Taurine & Inositol Ratio', 'Iconic Twin Clashing Bulls Graphic'],
+      origin: 'Cadbury India',
+      size: '130g - 286g Luxury Box',
+      flavorNotes: 'Assorted Dairy Milk silkiness, chewy caramel 5 Star, crispy Perk wafer, crunchy Gems',
+      highlights: ['Complete Cadbury variety assortment', 'Ready-to-gift festive gold ribbon box', 'Ideal for birthdays, festivities & celebrations'],
     },
   },
 
-  // 18. MONSTER ENERGY MANGO LOCO
+  // 28. KURKURE MASALA MUNCH
   {
-    id: 'monster-energy-mango-loco',
-    name: 'Monster Energy Mango Loco Juicy Energy',
-    brand: 'Monster Energy Juice',
-    category: 'energy-beverages',
-    categoryLabel: 'Energy & Beverages',
-    shortDescription: 'Heavenly blend of exotic tropical mango juices in an iconic Mexican Dia de los Muertos blue can.',
-    description: 'A heavenly blend of exotic mango, guava, and passion fruit juices crazy enough to attract the attention of the night. Wrapped in artwork inspired by the Mexican Day of the Dead skeleton culture.',
-    image: monsterMangoLocoImg,
-    images: [
-      monsterMangoLocoImg,
-      monsterPipelinePunchImg,
-      thailandRedBullImg
-    ],
-    badges: ['Fan Favorite', 'Real Fruit Juice', 'Original Art Can'],
-    isTrending: true,
+    id: 'kurkure-masala-munch',
+    name: 'Kurkure Masala Munch Crispy Puffs',
+    brand: 'Kurkure',
+    category: 'chips-namkeen',
+    categoryLabel: 'Chips & Savory Snacks',
+    shortDescription: 'Tedha hai par mera hai! The iconic crispy crunchy puffed snack bursting with fiery chatpata Indian spices.',
+    description: 'Made from premium grain flour and authentic Indian spices, Kurkure Masala Munch delivers an addictive crispy crunch with every bite. The classic blend of red chillies, coriander, cumin, and amchur mango powder creates the ultimate tea-time munch.',
+    image: kurkureMasalaMunchImg,
+    images: [kurkureMasalaMunchImg],
+    badges: ['Iconic Tedha Crunch', 'Chatpata Masala', 'Party Favorite'],
     isBestSeller: true,
+    isTrending: true,
     variants: {
-      name: 'Size',
-      options: ['500ml Single Can', 'Pack of 2', 'Collector 4-Pack'],
+      name: 'Pack Size',
+      options: ['Family Jumbo Pack (165g)', 'Party Pack (85g)', 'Snack Pack (45g)'],
     },
     details: {
-      origin: 'Overseas Import Batch',
-      size: '500ml Can',
-      flavorNotes: 'Ripe luscious mango puree with tropical passionfruit kick',
-      highlights: ['Intricate Calavera Art Can', 'Packed with Real Tropical Juices', 'Full Monster Energy Blend'],
+      origin: 'PepsiCo India',
+      size: '45g - 165g Jumbo Pack',
+      flavorNotes: 'Fiery red chilli, tangy mango powder (amchur), roasted cumin, golden corn crunch',
+      highlights: ['100% vegetarian Indian snack', 'Cooked with trusted rice & corn grains', 'Irresistible chatpata zing'],
+    },
+  },
+
+  // 29. KURKURE GREEN CHUTNEY STYLE
+  {
+    id: 'kurkure-green-chutney',
+    name: 'Kurkure Green Chutney Style Tangy Puffs',
+    brand: 'Kurkure',
+    category: 'chips-namkeen',
+    categoryLabel: 'Chips & Savory Snacks',
+    shortDescription: 'Zesty and tangy twisted crispy puffs flavored with garden-fresh green mint, coriander, and chatpata spices.',
+    description: 'A tribute to roadside Indian green chutney street food flavors. Kurkure Green Chutney Style infuses refreshing herbal mint, coriander, and spicy green chillies into crunchy golden puffed curls.',
+    image: kurkureGreenChutneyImg,
+    images: [kurkureGreenChutneyImg],
+    badges: ['Herbal Mint Zing', 'Tangy & Spicy', 'All-Time Favorite'],
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Family Jumbo Pack (165g)', 'Standard Pack (80g)', 'Quick Snack (40g)'],
+    },
+    details: {
+      origin: 'PepsiCo India',
+      size: '40g - 165g Family Pack',
+      flavorNotes: 'Fresh green mint, cilantro herbs, zesty lime, spicy green chillies',
+      highlights: ['Authentic street-style mint chutney profile', 'Crisp aerated texture', 'Zero artificial colors'],
+    },
+  },
+
+  // 30. LAY\'S INDIA\'S MAGIC MASALA
+  {
+    id: 'lays-magic-masala',
+    name: "Lay's India's Magic Masala Potato Chips",
+    brand: "Lay's",
+    category: 'chips-namkeen',
+    categoryLabel: 'Chips & Savory Snacks',
+    shortDescription: 'The legendary blue pack: crispy ridged golden potato chips tossed in a magical blend of authentic Indian aromatic spices.',
+    description: "Lay's India's Magic Masala is India's most beloved potato chip. Thinly sliced farm-grown potatoes fried to golden perfection and generously coated with an intoxicating blend of cumin, coriander, red chilli, and tangy amchur.",
+    image: laysMagicMasalaImg,
+    images: [laysMagicMasalaImg],
+    badges: ['Legendary Blue Pack', '#1 Chips Bestseller', 'Aromatic Spice'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Mega Party Pack (115g)', 'Share Pack (73g)', 'Snack Pack (40g)'],
+    },
+    details: {
+      origin: 'PepsiCo India',
+      size: '40g - 115g Mega Pack',
+      flavorNotes: 'Aromatic roasted spices, tangy dried mango, warm garam masala, crunchy potato',
+      highlights: ['Made with 100% farm-grown quality potatoes', 'Signature ridged cut for maximum spice retention', 'India’s highest-rated chip flavor'],
+    },
+  },
+
+  // 31. LAY\'S AMERICAN STYLE CREAM & ONION
+  {
+    id: 'lays-cream-onion',
+    name: "Lay's American Style Cream & Onion Potato Chips",
+    brand: "Lay's",
+    category: 'chips-namkeen',
+    categoryLabel: 'Chips & Savory Snacks',
+    shortDescription: 'The classic light green pack: smooth sour cream, mild sweet onion, and delicate herb seasoning on crispy golden chips.',
+    description: "Cool, velvety, and delicately balanced. Lay's American Style Cream & Onion features ultra-thin potato slices dusted with luscious sour cream flavor and garden spring onions. A soothing, savory indulgence.",
+    image: laysCreamOnionImg,
+    images: [laysCreamOnionImg],
+    badges: ['Classic Green Pack', 'Smooth & Savory', 'Universal Favorite'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Mega Party Pack (115g)', 'Share Pack (73g)', 'Snack Pack (40g)'],
+    },
+    details: {
+      origin: 'PepsiCo India',
+      size: '40g - 115g Mega Pack',
+      flavorNotes: 'Rich velvety sour cream, sweet caramelized spring onion, fresh herbs, subtle salt',
+      highlights: ['Delicate melt-in-mouth crispness', 'Smooth non-spicy profile adored by all ages', 'Great with dips & beverages'],
+    },
+  },
+
+  // 32. LAY\'S SPANISH TOMATO TANGO
+  {
+    id: 'lays-tomato-tango',
+    name: "Lay's Spanish Tomato Tango Potato Chips",
+    brand: "Lay's",
+    category: 'chips-namkeen',
+    categoryLabel: 'Chips & Savory Snacks',
+    shortDescription: 'The energetic red pack: sun-ripened sweet and tangy Spanish tomatoes infused with fragrant herbs on crispy chips.',
+    description: "Bursting with bold Mediterranean tang. Lay's Spanish Tomato Tango combines the natural sweet acidity of juicy sun-kissed tomatoes with subtle paprika and aromatic spices for a bright, joyful crunch.",
+    image: laysTomatoTangoImg,
+    images: [laysTomatoTangoImg],
+    badges: ['Vibrant Red Pack', 'Sweet & Tangy', 'Crowd Pleaser'],
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Mega Party Pack (115g)', 'Share Pack (73g)', 'Snack Pack (40g)'],
+    },
+    details: {
+      origin: 'PepsiCo India',
+      size: '40g - 115g Mega Pack',
+      flavorNotes: 'Sun-ripened sweet red tomato, tangy citric zing, roasted onion & garlic accents',
+      highlights: ['Irresistible sweet-tangy flavor harmony', 'Thin crispy golden cut', 'Perfect movie & party snack'],
+    },
+  },
+
+  // 33. LAY\'S CLASSIC SALTED
+  {
+    id: 'lays-classic-salted',
+    name: "Lay's Classic Salted Crispy Potato Chips",
+    brand: "Lay's",
+    category: 'chips-namkeen',
+    categoryLabel: 'Chips & Savory Snacks',
+    shortDescription: 'The timeless bright yellow pack: paper-thin golden fried potatoes lightly sprinkled with pure crystal sea salt.',
+    description: "Simplicity at its absolute finest. Made strictly from select hand-picked farm potatoes, golden oil, and pristine salt. Lay's Classic Salted lets the natural rich, earthy potato flavor shine through with clean crunch.",
+    image: laysClassicSaltedImg,
+    images: [laysClassicSaltedImg],
+    badges: ['Pure Golden Salt', 'Timeless Classic', '100% Natural Flavor'],
+    isBestSeller: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Mega Party Pack (115g)', 'Share Pack (73g)', 'Snack Pack (40g)'],
+    },
+    details: {
+      origin: 'PepsiCo India',
+      size: '40g - 115g Mega Pack',
+      flavorNotes: 'Pure roasted golden potato, clean sea salt crystalline crunch',
+      highlights: ['Zero artificial flavors or preservatives', 'Lightest and crispiest chip texture', 'Perfect accompaniment to hot drinks and chilled colas'],
     },
   },
 ];

@@ -31,7 +31,6 @@ export const Navbar: React.FC<NavbarProps> = ({
     { id: 'categories', label: 'Categories' },
     { id: 'belivita', label: 'Belivita Perfumes', highlight: true },
     { id: 'bestsellers', label: 'Best Sellers' },
-    { id: 'newarrivals', label: 'New Arrivals' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
   ];

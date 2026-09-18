@@ -23,15 +23,15 @@ export const CustomerStories: React.FC = () => {
     {
       name: 'Ananya Verma',
       city: 'Bengaluru, Karnataka',
-      item: 'Prime Hydration Ice Pop + Stanley Tumbler',
-      comment: 'Finally found real USA imported Prime without paying insane airport prices. The Stanley tumbler in Rose Quartz is 100% genuine with authentic box serials. Thank you SELLERSTOP!',
+      item: 'Cadbury Silk Oreo Bar + Bubbly Aerated Bar',
+      comment: 'Ordered Cadbury Silk Oreo and Silk Bubbly. Arrived in Bangalore packed in high-grade thermal foil with cold ice gel packs, completely firm and unmelted. Phenomenal chocolate quality!',
       date: 'Verified Buyer • 1 week ago',
     },
     {
       name: 'Kabir Chawla',
       city: 'Chandigarh',
-      item: 'Takis Fuego Mega Bag + Feastables Bar',
-      comment: 'Takis were super fresh and crunchy, spicy habanero punch is unmatched. Smooth WhatsApp transaction, no app lag or signup forms needed.',
+      item: 'Campa Power Energy Drink (Pack of 4) + Diet Coke Cans',
+      comment: 'Campa Energy hits with instant vitality without chemical aftertaste. Cans arrived ice-cold and without a single dent. Smooth WhatsApp interaction with Ishan directly!',
       date: 'Verified Buyer • 1 week ago',
     },
   ];

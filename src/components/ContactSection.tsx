@@ -191,7 +191,7 @@ Please let me know availability and pricing. Thank you!`;
                   required
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="e.g. I want 2 Prime Hydration Ice Pop and 1 Dubai Kunafa Chocolate bar. Please let me know price and delivery time."
+                  placeholder="e.g. I want 2 Cadbury Silk Oreo bars, 2 Campa Energy chilled cans, and 1 Dubai Kunafa Chocolate. Please let me know price and delivery time."
                   className="w-full text-sm p-4 rounded-xl bg-neutral-950 border border-neutral-800 text-white placeholder-neutral-500 focus:outline-none focus:border-amber-400 resize-none"
                 />
               </div>

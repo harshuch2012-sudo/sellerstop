@@ -3,14 +3,18 @@ import { Sparkles, Flame, ShieldCheck, Zap, Globe, MessageCircle } from 'lucide-
 
 export const LiveTickerMarquee: React.FC = () => {
   const tickerItems = [
-    { text: 'VIRAL DUBAI KUNAFA PISTACHIO BARS IN STOCK', icon: Flame, color: 'text-amber-400' },
-    { text: 'MONSTER MANGO LOCO, PIPELINE PUNCH & ULTRA ZERO', icon: Zap, color: 'text-emerald-400' },
-    { text: 'THAILAND RED BULL KRATING DAENG GOLD NOW IN STOCK', icon: Flame, color: 'text-amber-400' },
-    { text: 'CADBURY DAIRY MILK SILK & ORIGINAL KITKAT BARS', icon: Sparkles, color: 'text-amber-300' },
+    { text: "KURKURE MASALA MUNCH & GREEN CHUTNEY FRESH CRISP PACKETS", icon: Flame, color: 'text-amber-400' },
+    { text: "LAY'S MAGIC MASALA, CREAM & ONION, TOMATO TANGO & SALTED", icon: Sparkles, color: 'text-emerald-400' },
+    { text: 'CADBURY SILK OREO, SILK BUBBLY & CELEBRATIONS GIFT BOXES', icon: Sparkles, color: 'text-amber-300' },
+    { text: 'PARLE-G ORIGINAL GLUCOSE & BRITANNIA MARIE GOLD IN STOCK', icon: Flame, color: 'text-amber-300' },
+    { text: 'CAMPA POWER ENERGY DRINK, COCA-COLA CHILLED & DIET COKE', icon: Zap, color: 'text-rose-400' },
+    { text: 'MONSTER MANGO LOCO, PIPELINE PUNCH & ULTRA ZERO CANS', icon: Zap, color: 'text-emerald-400' },
+    { text: 'THAILAND RED BULL KRATING DAENG GOLD ORIGINAL CANS', icon: Flame, color: 'text-amber-400' },
+    { text: 'VIRAL DUBAI KUNAFA PISTACHIO BARS WITH FRESH TAHINI', icon: Flame, color: 'text-amber-400' },
     { text: 'BELIVITA OUD ROYAL EXTRAIT 35% DE PARFUM', icon: Sparkles, color: 'text-amber-300' },
     { text: 'PAN-INDIA EXPRESS AIR COURIER DISPATCH', icon: Globe, color: 'text-blue-400' },
     { text: 'ORDER DIRECT VIA WHATSAPP: +91 9953549760', icon: MessageCircle, color: 'text-emerald-400' },
-    { text: '100% AUTHENTIC DIRECT OVERSEAS IMPORTS', icon: ShieldCheck, color: 'text-amber-400' },
+    { text: '100% AUTHENTIC DIRECT OVERSEAS & DOMESTIC DROPS', icon: ShieldCheck, color: 'text-amber-400' },
   ];
 
   return (

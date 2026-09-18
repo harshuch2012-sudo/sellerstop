@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { PRODUCTS_DATA, BUSINESS_INFO } from '../data/products';
+import { PRODUCTS_DATA } from '../data/products';
 import { Product, ActiveView } from '../types';
-import { getProductWhatsAppUrl, getGeneralWhatsAppUrl } from '../utils/whatsapp';
+import { getGeneralWhatsAppUrl } from '../utils/whatsapp';
 import { 
   Sparkles, 
   Orbit, 
@@ -10,11 +10,9 @@ import {
   Pause, 
   ArrowRight, 
   MessageCircle, 
-  ExternalLink,
   Flame,
   Zap,
-  CheckCircle2,
-  Compass
+  Cookie
 } from 'lucide-react';
 
 interface PlanetOrbitShowcaseProps {
@@ -26,16 +24,16 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
   onViewProduct,
   setActiveView,
 }) => {
-  // Selected 8 flagship orbiting items across confectionery, fragrance, drinks, and snacks
+  // Selected 8 flagship orbiting items across Silk chocolates, colas, energy, and treats
   const orbitProducts = [
-    PRODUCTS_DATA.find((p) => p.id === 'cadbury-dairy-milk-silk') || PRODUCTS_DATA[0],
-    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-mango-loco') || PRODUCTS_DATA[1],
-    PRODUCTS_DATA.find((p) => p.id === 'kitkat-classic-original') || PRODUCTS_DATA[2],
-    PRODUCTS_DATA.find((p) => p.id === 'thailand-red-bull-krating-daeng') || PRODUCTS_DATA[3],
-    PRODUCTS_DATA.find((p) => p.id === 'dubai-kunafa-chocolate') || PRODUCTS_DATA[4],
-    PRODUCTS_DATA.find((p) => p.id === 'monster-pipeline-punch') || PRODUCTS_DATA[5],
-    PRODUCTS_DATA.find((p) => p.id === 'belivita-oud-royal') || PRODUCTS_DATA[6],
-    PRODUCTS_DATA.find((p) => p.id === 'monster-ultra-white') || PRODUCTS_DATA[7],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-oreo') || PRODUCTS_DATA[0],
+    PRODUCTS_DATA.find((p) => p.id === 'campa-energy-drink') || PRODUCTS_DATA[1],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-bubbly') || PRODUCTS_DATA[2],
+    PRODUCTS_DATA.find((p) => p.id === 'coca-cola-classic') || PRODUCTS_DATA[3],
+    PRODUCTS_DATA.find((p) => p.id === 'nestle-milkybar-white-chocolate') || PRODUCTS_DATA[4],
+    PRODUCTS_DATA.find((p) => p.id === 'diet-coke-zero-sugar') || PRODUCTS_DATA[5],
+    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-mango-loco') || PRODUCTS_DATA[6],
+    PRODUCTS_DATA.find((p) => p.id === 'thailand-red-bull-krating-daeng') || PRODUCTS_DATA[7],
   ];
 
   const [isPaused, setIsPaused] = useState(false);
@@ -57,14 +55,16 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
 
   const categories = [
     { id: 'all', label: 'All Orbits', icon: Orbit },
-    { id: 'chocolates-snacks', label: 'Chocolates & Snacks', icon: Flame },
-    { id: 'perfumes', label: 'Luxury Perfumes', icon: Sparkles },
-    { id: 'beverages', label: 'Energy & Drinks', icon: Zap },
+    { id: 'chips-namkeen', label: "Lay's & Kurkure", icon: Flame },
+    { id: 'biscuits-bakery', label: 'Biscuits & Chai Treats', icon: Cookie },
+    { id: 'silk-chocolates', label: 'Silk & Milkybar', icon: Sparkles },
+    { id: 'chocolates-snacks', label: 'Celebrations & Munch', icon: Sparkles },
+    { id: 'energy-beverages', label: 'Energy & Colas', icon: Zap },
   ];
 
   const filteredProducts = selectedCategoryFilter === 'all' 
     ? orbitProducts 
-    : orbitProducts.filter((p) => p.category === selectedCategoryFilter);
+    : PRODUCTS_DATA.filter((p) => p.category === selectedCategoryFilter).slice(0, 8);
 
   return (
     <section id="planet-orbit-section" className="relative overflow-hidden py-20 md:py-28 bg-[#070709] border-b border-neutral-800/80 select-none">
@@ -108,7 +108,7 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
             transition={{ delay: 0.2 }}
             className="text-sm sm:text-base text-neutral-300 leading-relaxed font-light"
           >
-            Step into our gravitational pull. Handpicked Cadbury Dairy Milk Silk, classic KitKat, exotic Monster Energy flavours (Mango Loco, Pipeline Punch, Ultra Zero), Thailand Red Bull, Dubai Kunafa bars &amp; Belivita perfumes rotate live around the SELLERSTOP core. Hover or click any satellite to inspect.
+            Step into our gravitational pull. Handpicked Cadbury Silk Oreo, Silk Bubbly, Nestle Milkybar, Campa Power Energy Drink, ice-cold Coca-Cola Classic, Diet Coke, exotic Monster flavours, Thailand Red Bull &amp; Dubai Kunafa bars rotate live around the SELLERSTOP core. Hover or click any satellite to inspect.
           </motion.p>
 
           {/* Category Filter Pills to manipulate orbit */}
@@ -191,7 +191,7 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
             {/* Orbit status pill below planet */}
             <div className="mt-3 px-3 py-1 rounded-full bg-black/80 border border-white/10 backdrop-blur-md flex items-center gap-2 text-[10px] text-neutral-300 shadow-lg">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-              <span>Solar Orbit Active • 6 Items Circling</span>
+              <span>Solar Orbit Active • {filteredProducts.length} Items Circling</span>
             </div>
           </motion.div>
 
@@ -203,7 +203,6 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
             const currentAngle = (rotationAngle + angleOffset) * (Math.PI / 180);
 
             // Alternate orbital radii for rich multi-depth planetary feel
-            // Radii scale responsive to viewport:
             const isInner = idx % 2 === 0;
             const radiusX = isInner ? 190 : 280;
             const radiusY = isInner ? 140 : 210;

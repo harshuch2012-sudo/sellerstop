@@ -12,9 +12,9 @@ export const InstagramFeed: React.FC = () => {
     },
     {
       image: 'https://images.unsplash.com/photo-1622543925917-763c34d1a86e?w=600&auto=format&fit=crop&q=80',
-      caption: 'Fresh Prime Hydration crate drop! Meta Moon & Ice Pop available.',
+      caption: 'Campa Power Energy & Coca-Cola chilled cans ready for direct dispatch! ⚡',
       likes: '2.8k',
-      tag: '#PrimeHydration',
+      tag: '#CampaEnergy',
     },
     {
       image: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?w=600&auto=format&fit=crop&q=80',
@@ -23,10 +23,10 @@ export const InstagramFeed: React.FC = () => {
       tag: '#DubaiChocolate',
     },
     {
-      image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=600&auto=format&fit=crop&q=80',
-      caption: 'Korean skincare Holy Grail: COSRX Snail Mucin for glass skin.',
-      likes: '980',
-      tag: '#KBeautyIndia',
+      image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&auto=format&fit=crop&q=80',
+      caption: 'Cadbury Dairy Milk Silk Oreo & Silk Bubbly bars in stock with cool-pack shipping! 🍫',
+      likes: '3.4k',
+      tag: '#CadburySilk',
     },
   ];
 

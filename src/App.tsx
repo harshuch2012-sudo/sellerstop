@@ -238,7 +238,7 @@ export default function App() {
                       Featured Categories
                     </h2>
                     <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      Explore trending beverages, artisanal perfumes, imported snacks and K-beauty.
+                      Explore Silk chocolates, chilled energy drinks &amp; colas, artisanal perfumes, and imported treats.
                     </p>
                   </div>
 
@@ -255,7 +255,7 @@ export default function App() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {CATEGORIES_DATA.slice(0, 7).map((cat) => (
+                  {CATEGORIES_DATA.map((cat) => (
                     <CategoryCard
                       key={cat.id}
                       category={cat}
@@ -411,50 +411,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* 7. New Arrivals Section */}
-            <section className="py-16 md:py-20 border-b border-neutral-800/60 bg-neutral-950">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
-                  <div>
-                    <div className="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-                      <Sparkles className="w-4 h-4" />
-                      <span>Just Landed in Stock</span>
-                    </div>
-                    <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-                      New Arrivals
-                    </h2>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      Be the first to get your hands on our newest curated imports.
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => {
-                      setActiveView('newarrivals');
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }}
-                    className="text-xs sm:text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors"
-                  >
-                    <span>See All New Arrivals</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {newArrivalProducts.slice(0, 4).map((product) => (
-                    <ProductCard
-                      key={product.id}
-                      product={product}
-                      onViewProduct={setSelectedProduct}
-                      onAddToInquiry={handleAddToInquiry}
-                      isInInquiry={inquiryItemIds.includes(product.id)}
-                    />
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* 8. Why SELLERSTOP */}
+            {/* 7. Why SELLERSTOP */}
             <WhySellerstop />
 
             {/* Authenticity & Pan-India Dispatch Timeline */}

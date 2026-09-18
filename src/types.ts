@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: 'energy-beverages' | 'perfumes' | 'belivita' | 'chocolates-snacks' | 'personal-care' | 'imported' | 'trending';
+  category: 'chips-namkeen' | 'energy-beverages' | 'perfumes' | 'belivita' | 'chocolates-snacks' | 'silk-chocolates' | 'biscuits-bakery' | 'imported' | 'trending';
   categoryLabel: string;
   shortDescription: string;
   description: string;

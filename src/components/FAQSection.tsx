@@ -15,16 +15,16 @@ export const FAQSection: React.FC = () => {
       a: 'Simply tap "Order on WhatsApp" on any product, or add items to your Inquiry Bag and hit send. A pre-formatted message opens directly with Ishan Aggarwal (+91 9953549760). Ishan sends you live photos of the batch, confirms the final quote, accepts UPI/Bank transfer, and dispatches via express air courier with a tracking link.',
     },
     {
-      q: 'Will Dubai Kunafa Pistachio chocolate melt during transit?',
-      a: 'No! All temperature-sensitive perishables like Dubai Kunafa chocolate and snacks are dispatched in heavy multi-layer thermal insulation foil packed with frozen non-toxic ice gel packs, ensuring solid texture upon delivery anywhere in India.',
+      q: 'Will Cadbury Silk chocolates, Silk Oreo, Milkybar, or Dubai Kunafa melt during transit?',
+      a: 'Never! All heat-sensitive chocolates like Cadbury Dairy Milk Silk Oreo, Silk Bubbly, Milkybar, and Dubai Kunafa pistachio bars are dispatched in insulated thermal foil pouches packed with food-grade gel refrigerant cool-packs, guaranteeing solid condition on arrival anywhere in India.',
     },
     {
       q: 'Are Belivita perfumes 100% authentic Extrait de Parfum?',
       a: 'Yes, Belivita perfumes are master-crafted with 35% pure perfume oil concentration (Extrait grade). Each bottle features a heavy glass flacon, magnetic cap, and batch-stamped packaging with 12 to 16+ hours of skin longevity.',
     },
     {
-      q: 'Which exotic Monster Energy flavours and energy drinks do you import?',
-      a: 'We import authentic international batches including Monster Energy Mango Loco (Mexican Day of the Dead art can), Monster Pipeline Punch (Hawaiian passionfruit & guava), Ultra White Zero Sugar, and the original legendary Thailand Red Bull Krating Daeng Gold cans.',
+      q: 'Which beverages, energy drinks and colas do you stock?',
+      a: 'We stock Campa Power Energy Drinks, crisp Coca-Cola Classic, chilled Diet Coke silver cans, exotic Monster Energy flavours (Mango Loco, Pipeline Punch, Ultra White), and original Thailand Red Bull Krating Daeng Gold cans.',
     },
     {
       q: 'What is the delivery timeline across India?',

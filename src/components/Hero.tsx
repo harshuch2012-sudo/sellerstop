@@ -12,15 +12,16 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ setActiveView, openProductQuickView, onReplayVault }) => {
-  // Showcase flagship viral products including Monster Flavours, Thailand Red Bull, and Cadbury Silk
+  // Showcase flagship viral products including Silk Oreo, Silk Bubbly, Milkybar, Campa Energy, Coca-Cola, Diet Coke, Monster & Red Bull
   const heroProducts = [
-    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-mango-loco') || PRODUCTS_DATA[0],
-    PRODUCTS_DATA.find((p) => p.id === 'thailand-red-bull-krating-daeng') || PRODUCTS_DATA[1],
-    PRODUCTS_DATA.find((p) => p.id === 'monster-pipeline-punch') || PRODUCTS_DATA[2],
-    PRODUCTS_DATA.find((p) => p.id === 'cadbury-dairy-milk-silk') || PRODUCTS_DATA[3],
-    PRODUCTS_DATA.find((p) => p.id === 'kitkat-classic-original') || PRODUCTS_DATA[4],
-    PRODUCTS_DATA.find((p) => p.id === 'dubai-kunafa-chocolate') || PRODUCTS_DATA[5],
-    PRODUCTS_DATA.find((p) => p.id === 'belivita-oud-royal') || PRODUCTS_DATA[6],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-oreo') || PRODUCTS_DATA[0],
+    PRODUCTS_DATA.find((p) => p.id === 'campa-energy-drink') || PRODUCTS_DATA[1],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-bubbly') || PRODUCTS_DATA[2],
+    PRODUCTS_DATA.find((p) => p.id === 'coca-cola-classic') || PRODUCTS_DATA[3],
+    PRODUCTS_DATA.find((p) => p.id === 'nestle-milkybar-white-chocolate') || PRODUCTS_DATA[4],
+    PRODUCTS_DATA.find((p) => p.id === 'diet-coke-zero-sugar') || PRODUCTS_DATA[5],
+    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-mango-loco') || PRODUCTS_DATA[6],
+    PRODUCTS_DATA.find((p) => p.id === 'thailand-red-bull-krating-daeng') || PRODUCTS_DATA[7],
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);

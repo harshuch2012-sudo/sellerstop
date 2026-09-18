@@ -75,7 +75,7 @@ export const Footer: React.FC<FooterProps> = ({ setActiveView, onOpenInquiry }) 
               </span>
             </div>
             <p className="text-neutral-400 leading-relaxed">
-              Curating the world&apos;s most viral, imported, and hard-to-find goods—from Belivita perfumes to Prime drinks and viral snacks—delivered Pan-India.
+              Curating the world&apos;s most viral, imported, and hard-to-find goods—from Belivita perfumes to exotic energy cans, Silk chocolates, and chilled colas—delivered Pan-India.
             </p>
             <p className="text-neutral-300 font-medium text-xs">
               Founder & Owner: <strong className="text-amber-400">{BUSINESS_INFO.owner}</strong>
@@ -111,11 +111,6 @@ export const Footer: React.FC<FooterProps> = ({ setActiveView, onOpenInquiry }) 
               <li>
                 <button onClick={() => handleNavClick('bestsellers')} className="hover:text-amber-400 transition-colors">
                   Best Sellers
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleNavClick('newarrivals')} className="hover:text-amber-400 transition-colors">
-                  New Arrivals
                 </button>
               </li>
             </ul>
