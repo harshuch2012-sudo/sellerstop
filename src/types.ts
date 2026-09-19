@@ -2,7 +2,7 @@ export interface Product {
   id: string;
   name: string;
   brand: string;
-  category: 'chips-namkeen' | 'energy-beverages' | 'perfumes' | 'belivita' | 'chocolates-snacks' | 'silk-chocolates' | 'biscuits-bakery' | 'imported' | 'trending';
+  category: 'chips-namkeen' | 'energy-beverages' | 'chocolates-snacks' | 'silk-chocolates' | 'biscuits-bakery' | 'imported' | 'trending' | 'belivita' | 'perfumes';
   categoryLabel: string;
   shortDescription: string;
   description: string;
@@ -44,8 +44,8 @@ export type ActiveView =
   | 'home'
   | 'shop'
   | 'categories'
+  | 'belivita'
   | 'bestsellers'
   | 'newarrivals'
-  | 'belivita'
   | 'about'
   | 'contact';

@@ -43,6 +43,19 @@ import laysCreamOnionImg from '../assets/images/lays_cream_onion_1789732870377.j
 import laysTomatoTangoImg from '../assets/images/lays_tomato_tango_1789732883152.jpg';
 import laysClassicSaltedImg from '../assets/images/lays_classic_salted_1789732898229.jpg';
 
+// Red Bull Classic & Biscuit Oreo Original Authentic Studio Photography
+import redBullClassicImg from '../assets/images/redbull_classic_can_1789827037071.jpg';
+import oreoBiscuitImg from '../assets/images/oreo_biscuit_pack_1789827051255.jpg';
+
+// Monster Classic, Campa Gold Boost, Cadbury Dairy Milk Fruit & Nut, Fuse, 5 Star, Monaco & Good Day
+import monsterOriginalClassicImg from '../assets/images/monster_original_classic_1789827406446.jpg';
+import campaGoldBoostImg from '../assets/images/campa_gold_boost_1789827421768.jpg';
+import dairyMilkFruitNutImg from '../assets/images/dairy_milk_fruit_nut_1789827438895.jpg';
+import cadburyFuseImg from '../assets/images/cadbury_fuse_bar_1789827451046.jpg';
+import cadbury5StarImg from '../assets/images/cadbury_5_star_bar_1789827466976.jpg';
+import parleMonacoImg from '../assets/images/parle_monaco_bisc_1789827479985.jpg';
+import britanniaGoodDayImg from '../assets/images/britannia_good_day_1789827492711.jpg';
+
 export const BUSINESS_INFO = {
   name: 'SELLERSTOP',
   tagline: 'Imported. Popular. Premium.',
@@ -102,39 +115,39 @@ export const CATEGORIES_DATA: CategoryInfo[] = [
   {
     id: 'biscuits-bakery',
     name: 'Biscuits & Tea Treats',
-    tagline: 'Parle-G, Britannia Marie Gold & NutriChoice Digestive',
+    tagline: 'Oreo, Monaco, Good Day, Parle-G, Marie Gold & NutriChoice',
     iconName: 'Cookie',
-    image: parleGBiscuitImg,
-    count: 3,
+    image: oreoBiscuitImg,
+    count: 6,
   },
   {
     id: 'silk-chocolates',
     name: 'Silk & White Chocolates',
-    tagline: 'Cadbury Silk Oreo, Silk Bubbly, Milkybar & Velvet bars',
+    tagline: 'Dairy Milk Fruit & Nut, Silk Oreo, Silk Bubbly, Milkybar & Velvet bars',
     iconName: 'Sparkles',
     image: cadburySilkOreoImg,
-    count: 4,
+    count: 5,
   },
   {
     id: 'chocolates-snacks',
     name: 'Gourmet Chocolates & Treats',
-    tagline: 'Cadbury Celebrations, Munch, Snickers, Gems & Dubai Kunafa',
+    tagline: 'Cadbury 5 Star, Fuse, Celebrations, Snickers, Munch, Gems & Dubai Kunafa',
     iconName: 'Cookie',
     image: cadburyCelebrationsBoxImg,
-    count: 7,
+    count: 9,
   },
   {
     id: 'energy-beverages',
     name: 'Energy & Colas',
-    tagline: 'Campa Energy, Coca-Cola Classic, Diet Coke, Monster & Thai Red Bull',
+    tagline: 'Monster Classic, White Monster, Campa Gold Boost, Red Bull, Thai Red Bull & Colas',
     iconName: 'Zap',
-    image: campaEnergyImg,
-    count: 7,
+    image: redBullClassicImg,
+    count: 11,
   },
   {
     id: 'belivita',
     name: 'Belivita Perfumes',
-    tagline: 'Artisanal luxury fragrances with magnetic sillage',
+    tagline: 'Artisanal fragrances with magnetic long-lasting sillage',
     iconName: 'Sparkles',
     image: belivitaOudRoyalImg,
     count: 4,
@@ -146,14 +159,6 @@ export const CATEGORIES_DATA: CategoryInfo[] = [
     iconName: 'Flame',
     image: belivitaVelvetAmberImg,
     count: 4,
-  },
-  {
-    id: 'imported',
-    name: 'Imported Exclusives',
-    tagline: 'Directly sourced hard-to-find global drops',
-    iconName: 'Globe',
-    image: monsterMangoLocoImg,
-    count: 8,
   },
   {
     id: 'trending',
@@ -464,22 +469,22 @@ export const PRODUCTS_DATA: Product[] = [
     },
   },
 
-  // 11. MONSTER ULTRA WHITE ZERO
+  // 11. MONSTER ULTRA WHITE ZERO (WHITE MONSTER)
   {
     id: 'monster-ultra-white',
-    name: 'Monster Energy Ultra White Zero Sugar',
+    name: 'Monster Energy Ultra White Zero Sugar (White Monster)',
     brand: 'Monster Energy Ultra',
     category: 'energy-beverages',
     categoryLabel: 'Energy & Colas',
-    shortDescription: 'Zero sugar, zero calories, light citrus flavor in the iconic textured silver collector can.',
-    description: 'Unleash the Ultra Beast! A lighter-tasting, less sweet, zero calorie citrus energy drink wrapped in a stunning tactile frosted white and silver can.',
+    shortDescription: 'Zero sugar, zero calories, light crisp citrus flavor in the iconic textured frosted white collector can.',
+    description: 'Unleash the Ultra Beast! A lighter-tasting, less sweet, zero calorie sparkling citrus energy drink wrapped in a stunning tactile frosted white and silver can. Adored by fans as the quintessential White Monster.',
     image: monsterUltraWhiteImg,
     images: [
       monsterUltraWhiteImg,
       monsterMangoLocoImg,
       monsterPipelinePunchImg,
     ],
-    badges: ['Zero Sugar', 'Zero Calorie', 'Collector Can'],
+    badges: ['White Monster', 'Zero Sugar', 'Zero Calorie', 'Collector Can'],
     isTrending: true,
     variants: {
       name: 'Size',
@@ -1052,6 +1057,280 @@ export const PRODUCTS_DATA: Product[] = [
       size: '40g - 115g Mega Pack',
       flavorNotes: 'Pure roasted golden potato, clean sea salt crystalline crunch',
       highlights: ['Zero artificial flavors or preservatives', 'Lightest and crispiest chip texture', 'Perfect accompaniment to hot drinks and chilled colas'],
+    },
+  },
+
+  // 34. RED BULL CLASSIC ENERGY DRINK
+  {
+    id: 'redbull-classic-energy-drink',
+    name: 'Red Bull Classic Energy Drink (Chilled Can)',
+    brand: 'Red Bull',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'The world’s #1 original energy drink formulated with Alpine mountain water, Taurine, Caffeine & B-Vitamins in the iconic blue & silver can.',
+    description: 'Red Bull gives you wings. Appreciated worldwide by elite athletes, busy professionals, gamers, and travellers on long journeys. Crafted with pristine Alpine spring water, high-grade Taurine, essential B-group vitamins (B3, B5, B6, B12), and pure caffeine to revitalize body and mind whenever peak focus and vitality are needed.',
+    image: redBullClassicImg,
+    images: [
+      redBullClassicImg,
+      thailandRedBullImg,
+      campaEnergyImg,
+      cocaColaClassicImg,
+    ],
+    badges: ['Vitalizes Body & Mind', '#1 Energy Drink', 'Original Blue & Silver'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Size / Pack',
+      options: ['250ml Classic Can', '350ml Big Can', 'Pack of 4 Power Pack', 'Case of 24 Chilled Tray'],
+    },
+    details: {
+      origin: 'Red Bull GmbH, Austria (Original Global Formulation)',
+      size: '250ml / 350ml Can',
+      flavorNotes: 'Signature crisp sweet-tart energy profile with effervescent citrus carbonation',
+      highlights: ['Pure Alpine water & pharmaceutical-grade Taurine', 'B-Group Vitamins (B3, B5, B6, B12)', 'Guaranteed ice-cold, fresh & dent-free dispatch'],
+    },
+  },
+
+  // 35. OREO ORIGINAL VANILLA CREME SANDWICH BISCUITS
+  {
+    id: 'oreo-original-vanilla-biscuit',
+    name: 'Oreo Original Vanilla Creme Sandwich Biscuits',
+    brand: 'Oreo',
+    category: 'biscuits-bakery',
+    categoryLabel: 'Biscuits & Tea Treats',
+    shortDescription: 'The world’s favourite biscuit: richly embossed dark cocoa cookies sandwiching sweet, velvety smooth rich vanilla creme.',
+    description: 'Twist, Lick, Dunk! Oreo is the legendary sandwich cookie loved by billions across the globe. Two richly embossed, deeply satisfying dark cocoa biscuits embrace a generous layer of sweet, melt-in-mouth vanilla creme. Dunk it into a cold glass of milk or hot tea, crumble it over ice cream, or enjoy it cookie by cookie.',
+    image: oreoBiscuitImg,
+    images: [
+      oreoBiscuitImg,
+      cadburySilkOreoImg,
+      parleGBiscuitImg,
+      marieGoldBiscuitImg,
+    ],
+    badges: ['Twist Lick Dunk', 'Rich Dark Cocoa', 'World’s #1 Biscuit'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Classic Pack (120g)', 'Family Sharing Pack (300g)', 'Mega Value Saver (500g)'],
+    },
+    details: {
+      origin: 'Mondelez International Authentic Batch',
+      size: '120g - 500g Value Pack',
+      flavorNotes: 'Deep roasted cocoa biscuit paired with silky, melt-in-mouth vanilla sweet creme',
+      highlights: ['Signature embossed dark cocoa biscuit', 'Creamy rich vanilla center', 'Perfect for milk dipping, milkshakes, or sweet snacking'],
+    },
+  },
+
+  // 36. MONSTER ENERGY ORIGINAL CLASSIC (SIMPLE MONSTER)
+  {
+    id: 'monster-energy-original-classic',
+    name: 'Monster Energy Original Green Claw (Simple Monster)',
+    brand: 'Monster Energy',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'The legendary original green claw beast: smooth, easy-drinking carbonated energy packed with Taurine, L-Carnitine, Ginseng & B-Vitamins.',
+    description: 'Tear into a can of the meanest energy drink on the planet, Monster Energy. The iconic matte black can with the vicious neon green three-claw scratch. Known affectionately as the original "Simple Monster", it delivers a powerful punch with a smooth, easy-drinking citrus-berry flavor. Athletes, gamers, musicians, and road-trippers swear by it.',
+    image: monsterOriginalClassicImg,
+    images: [
+      monsterOriginalClassicImg,
+      monsterUltraWhiteImg,
+      monsterMangoLocoImg,
+      monsterPipelinePunchImg,
+    ],
+    badges: ['Simple Monster', 'Original Green Claw', 'Unleash The Beast'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Size / Pack',
+      options: ['500ml Classic Can', 'Twin Pack (2 x 500ml)', 'Collector 4-Pack', 'Case of 12 Monster Tray'],
+    },
+    details: {
+      origin: 'Monster Energy Company Original Batch',
+      size: '500ml Can',
+      flavorNotes: 'Smooth, sweet citrus with crisp berry undertones and high carbonation rush',
+      highlights: ['160mg Caffeine & Taurine Energy Blend', 'Panax Ginseng Root & L-Carnitine', 'Iconic Matte Black Neon Green Claw Can'],
+    },
+  },
+
+  // 37. CAMPA GOLD BOOST ENERGY DRINK
+  {
+    id: 'campa-gold-boost-energy',
+    name: 'Campa Gold Boost Energy Drink (Chilled Can)',
+    brand: 'Campa Gold (Reliance)',
+    category: 'energy-beverages',
+    categoryLabel: 'Energy & Colas',
+    shortDescription: 'High-octane golden energy booster engineered with Taurine, Ginseng & Vitamin B Complex in a striking gold aluminum can.',
+    description: 'Fuel your ambition with Campa Gold Boost. Formulated in an eye-catching metallic gold & deep obsidian can, this powerhouse beverage delivers an immediate surge of vitality with premium Taurine, Korean Ginseng extract, Inositol, and essential B-vitamins. Crisp, invigorating, and perfectly carbonated for active days and late-night drives.',
+    image: campaGoldBoostImg,
+    images: [
+      campaGoldBoostImg,
+      campaEnergyImg,
+      redBullClassicImg,
+      cocaColaClassicImg,
+    ],
+    badges: ['Gold Boost', 'High Octane', 'Taurine & Ginseng'],
+    isNewArrival: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Options',
+      options: ['250ml Chilled Gold Can', 'Pack of 4 Power Pack', 'Case of 12 Gold Crate'],
+    },
+    details: {
+      origin: 'Campa Reliance India',
+      size: '250ml Sleek Can',
+      flavorNotes: 'Zesty golden amber citrus with sweet tart energy kick',
+      highlights: ['Korean Ginseng & Taurine Formula', 'Vitamins B2, B3, B6 & B12', 'Lightning-fast energy replenishment'],
+    },
+  },
+
+  // 38. CADBURY DAIRY MILK FRUIT & NUT
+  {
+    id: 'cadbury-dairy-milk-fruit-and-nut',
+    name: 'Cadbury Dairy Milk Fruit & Nut Chocolate Bar',
+    brand: 'Cadbury Dairy Milk',
+    category: 'silk-chocolates',
+    categoryLabel: 'Silk & Milk Chocolates',
+    shortDescription: 'Generous whole roasted California almonds and plump juicy sun-dried raisins immersed in rich Cadbury milk chocolate.',
+    description: 'The undisputed king of textured chocolate. Every single block of Cadbury Dairy Milk Fruit & Nut is generously loaded with whole, crunchy roasted almonds and sweet, succulent raisins bathed in iconic glass-and-a-half creamy dairy milk chocolate. A timeless celebration of sweet chewiness and nutty crunch.',
+    image: dairyMilkFruitNutImg,
+    images: [
+      dairyMilkFruitNutImg,
+      dairyMilkSilkImg,
+      cadburySilkOreoImg,
+    ],
+    badges: ['Plump Raisins', 'Roasted Almonds', 'All-Time Favorite'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Bar Size',
+      options: ['80g Standard Bar', '137g Family Share Bar', 'Pack of 3 Sharing Pack'],
+    },
+    details: {
+      origin: 'Cadbury Authentic Master Batch',
+      size: '80g / 137g Bar',
+      flavorNotes: 'Rich velvety milk chocolate, crunchy toasted almonds, chewy sweet raisins',
+      highlights: ['100% sustainably sourced cocoa', 'Generous ratio of whole nuts and dried fruits', 'Dispatched with insulated ice-packs'],
+    },
+  },
+
+  // 39. CADBURY FUSE PEANUT & CHOCOLATE FUDGE
+  {
+    id: 'cadbury-fuse-chocolate',
+    name: 'Cadbury Fuse Peanut & Chocolate Fudge Bar',
+    brand: 'Cadbury Fuse',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Chocolates & Treats',
+    shortDescription: 'Chunky roasted peanuts and chocolate fudge wrapped in a blanket of creamy Cadbury milk chocolate for an intense feast.',
+    description: 'A feast of textures in every single bite! Cadbury Fuse is an indulgent bar brimming with crunchy whole roasted peanuts, chewy chocolate nougat, and dense fudge ribbons, entirely enrobed in smooth Cadbury milk chocolate. Designed to satisfy serious hunger with hearty nuttiness and rich cocoa.',
+    image: cadburyFuseImg,
+    images: [
+      cadburyFuseImg,
+      snickersChocBarImg,
+      nestleMunchBarImg,
+    ],
+    badges: ['Chunky Peanuts', 'Chocolate Fudge', 'Hunger Feast'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Size / Pack',
+      options: ['45g Single Bar', 'Pack of 4 Power Pack', 'Mega Box (Box of 16 Bars)'],
+    },
+    details: {
+      origin: 'Cadbury India',
+      size: '45g Bar',
+      flavorNotes: 'Crunchy golden roasted peanuts, chewy chocolate nougat, rich cocoa fudge',
+      highlights: ['High peanut protein content', 'Complex multi-layered texture', 'Instant energy satisfaction'],
+    },
+  },
+
+  // 40. CADBURY 5 STAR CARAMEL & NOUGAT
+  {
+    id: 'cadbury-5-star-chocolate',
+    name: 'Cadbury 5 Star Caramel & Nougat Chocolate Bar',
+    brand: 'Cadbury 5 Star',
+    category: 'chocolates-snacks',
+    categoryLabel: 'Chocolates & Treats',
+    shortDescription: 'Eat 5 Star, do nothing! The legendary golden bar of chewy gooey caramel and fluffy chocolate nougat wrapped in milk chocolate.',
+    description: 'The golden Indian sensation that has won hearts for over 50 years. Cadbury 5 Star combines chewy, stretching golden caramel and soft, pillowy chocolate nougat encased in classic Cadbury milk chocolate. It is rich, irresistibly chewy, and universally loved. Just sit back, take a bite, and do nothing.',
+    image: cadbury5StarImg,
+    images: [
+      cadbury5StarImg,
+      cadburyGemsPackImg,
+      cadburyCelebrationsBoxImg,
+    ],
+    badges: ['Eat 5 Star Do Nothing', 'Chewy Caramel', 'Iconic Legend'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Classic Bar (40g)', '5 Star 3D (45g)', 'Pack of 8 Share Pack', 'Jumbo Box (20 Bars)'],
+    },
+    details: {
+      origin: 'Cadbury India',
+      size: '40g - 45g Bar',
+      flavorNotes: 'Warm golden buttery caramel, soft malted chocolate nougat, creamy milk chocolate',
+      highlights: ['Signature chewy caramel stretch', 'Nostalgic Indian favorite', 'Fresh temperature-regulated delivery'],
+    },
+  },
+
+  // 41. PARLE MONACO CLASSIC SALTED CRACKERS
+  {
+    id: 'parle-monaco-salted-biscuit',
+    name: 'Parle Monaco Classic Salted Crackers Biscuits',
+    brand: 'Parle Monaco',
+    category: 'biscuits-bakery',
+    categoryLabel: 'Biscuits & Tea Treats',
+    shortDescription: 'Light, flaky, and crispy golden round crackers delicately dusted with sparkling sea salt for the ultimate savory crunch.',
+    description: 'Life needs a little namkeen! Parle Monaco is India\'s pioneer light salted biscuit. Perfectly baked with perforated aeration for a feathery light, melt-in-the-mouth snap. Lightly seasoned with fine salt crystals, Monaco is sensational eaten straight from the pack, served with hot masala tea, or topped with cheese, mint chutney, and diced vegetables for instant canapés.',
+    image: parleMonacoImg,
+    images: [
+      parleMonacoImg,
+      parleGBiscuitImg,
+      marieGoldBiscuitImg,
+    ],
+    badges: ['Classic Salted', 'Light & Crispy', 'Chai Companion'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Pack Size',
+      options: ['Snack Pack (75g)', 'Value Pack (200g)', 'Family Mega Pack (400g)'],
+    },
+    details: {
+      origin: 'Parle Products, India',
+      size: '75g - 400g Mega Pack',
+      flavorNotes: 'Toasted golden wheat, delicate butteriness, crisp sea salt crystals',
+      highlights: ['Feather-light crispy wafer texture', 'Versatile as snack or cocktail canapé base', 'Zero trans fat & fresh crispy seal'],
+    },
+  },
+
+  // 42. BRITANNIA GOOD DAY BUTTER COOKIES
+  {
+    id: 'britannia-good-day-butter-cookies',
+    name: 'Britannia Good Day Butter & Cashew Smile Cookies',
+    brand: 'Britannia Good Day',
+    category: 'biscuits-bakery',
+    categoryLabel: 'Biscuits & Tea Treats',
+    shortDescription: 'Rich, melt-in-mouth buttery cookies with the iconic curved smile ridges, packed with real butter and roasted cashew nuts.',
+    description: 'Spread smiles with every bite. Britannia Good Day Butter cookies are crafted with abundant rich butter and a delicate crunch. Instantly recognizable by the signature ribbed smile design on each golden cookie, they melt effortlessly on the tongue, making every tea break or coffee session an authentic delight.',
+    image: britanniaGoodDayImg,
+    images: [
+      britanniaGoodDayImg,
+      oreoBiscuitImg,
+      nutrichoiceBiscuitImg,
+    ],
+    badges: ['Iconic Smile Design', 'Rich Pure Butter', 'Cashew Crunch'],
+    isBestSeller: true,
+    isTrending: true,
+    variants: {
+      name: 'Variety & Size',
+      options: ['Butter Cookies (120g)', 'Cashew Crunch (100g)', 'Family Mega Multipack (600g)'],
+    },
+    details: {
+      origin: 'Britannia Industries, India',
+      size: '100g - 600g Multipack',
+      flavorNotes: 'Rich cream butter, sweet roasted cashew nut crunch, caramelized bakery aroma',
+      highlights: ['Signature smile ribbed biscuit pattern', 'High butter content for melt-in-mouth texture', 'Loved by all age groups across India'],
     },
   },
 ];

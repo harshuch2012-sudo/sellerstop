@@ -136,14 +136,16 @@ export default function App() {
       const matchesCategory =
         selectedCategory === 'all' ||
         product.category === selectedCategory ||
-        (selectedCategory === 'belivita' && product.isBelivita);
+        (selectedCategory === 'belivita' && product.isBelivita) ||
+        (selectedCategory === 'perfumes' && (product.isBelivita || product.category === 'belivita'));
 
       const matchesSearch =
         searchQuery.trim() === '' ||
         product.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.brand.toLowerCase().includes(searchQuery.toLowerCase()) ||
         product.shortDescription.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        product.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase());
+        product.categoryLabel.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (product.badges && product.badges.some((b) => b.toLowerCase().includes(searchQuery.toLowerCase())));
 
       return matchesCategory && matchesSearch;
     });
@@ -161,8 +163,8 @@ export default function App() {
     () => PRODUCTS_DATA.filter((p) => p.isTrending),
     []
   );
-  const importedProducts = useMemo(
-    () => PRODUCTS_DATA.filter((p) => p.category === 'imported' || p.badges?.includes('Imported')),
+  const luxuryPerfumeProducts = useMemo(
+    () => PRODUCTS_DATA.filter((p) => p.isBelivita || p.category === 'belivita' || p.category === 'perfumes'),
     []
   );
 
@@ -331,34 +333,34 @@ export default function App() {
             {/* Curator Thoughts & Philosophy Section */}
             <CuratorThoughts />
 
-            {/* 5. Imported Products Section */}
+            {/* 5. Luxury Perfumes Section */}
             <section className="py-16 md:py-20 border-b border-neutral-800/60 bg-neutral-950">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
                   <div>
                     <div className="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-                      <Globe className="w-4 h-4" />
-                      <span>Direct Overseas Shipments</span>
+                      <Sparkles className="w-4 h-4" />
+                      <span>Artisanal Extrait De Parfum</span>
                     </div>
                     <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-                      Imported Exclusives
+                      Luxury Perfumes
                     </h2>
                     <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      USA, Japan, UAE and European goods delivered anywhere across India.
+                      Designer decants, Eau de Parfums & Middle-Eastern ouds with magnetic 16+ hour sillage.
                     </p>
                   </div>
 
                   <button
-                    onClick={() => handleSelectCategory('imported')}
+                    onClick={() => handleSelectCategory('perfumes')}
                     className="text-xs sm:text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors"
                   >
-                    <span>Explore Imported Drops</span>
+                    <span>Explore Luxury Perfumes</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {importedProducts.slice(0, 4).map((product) => (
+                  {luxuryPerfumeProducts.slice(0, 4).map((product) => (
                     <ProductCard
                       key={product.id}
                       product={product}

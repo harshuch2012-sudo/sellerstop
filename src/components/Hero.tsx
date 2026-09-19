@@ -12,16 +12,18 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ setActiveView, openProductQuickView, onReplayVault }) => {
-  // Showcase flagship viral products including Silk Oreo, Silk Bubbly, Milkybar, Campa Energy, Coca-Cola, Diet Coke, Monster & Red Bull
+  // Showcase flagship viral products across energy drinks, silk & treats, and iconic biscuits
   const heroProducts = [
-    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-oreo') || PRODUCTS_DATA[0],
-    PRODUCTS_DATA.find((p) => p.id === 'campa-energy-drink') || PRODUCTS_DATA[1],
-    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-bubbly') || PRODUCTS_DATA[2],
-    PRODUCTS_DATA.find((p) => p.id === 'coca-cola-classic') || PRODUCTS_DATA[3],
-    PRODUCTS_DATA.find((p) => p.id === 'nestle-milkybar-white-chocolate') || PRODUCTS_DATA[4],
-    PRODUCTS_DATA.find((p) => p.id === 'diet-coke-zero-sugar') || PRODUCTS_DATA[5],
-    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-mango-loco') || PRODUCTS_DATA[6],
-    PRODUCTS_DATA.find((p) => p.id === 'thailand-red-bull-krating-daeng') || PRODUCTS_DATA[7],
+    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-original-classic') || PRODUCTS_DATA[0],
+    PRODUCTS_DATA.find((p) => p.id === 'monster-ultra-white') || PRODUCTS_DATA[1],
+    PRODUCTS_DATA.find((p) => p.id === 'redbull-classic-energy-drink') || PRODUCTS_DATA[2],
+    PRODUCTS_DATA.find((p) => p.id === 'campa-gold-boost-energy') || PRODUCTS_DATA[3],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-dairy-milk-fruit-and-nut') || PRODUCTS_DATA[4],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-5-star-chocolate') || PRODUCTS_DATA[5],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-fuse-chocolate') || PRODUCTS_DATA[6],
+    PRODUCTS_DATA.find((p) => p.id === 'oreo-original-vanilla-biscuit') || PRODUCTS_DATA[7],
+    PRODUCTS_DATA.find((p) => p.id === 'parle-monaco-salted-biscuit') || PRODUCTS_DATA[8],
+    PRODUCTS_DATA.find((p) => p.id === 'britannia-good-day-butter-cookies') || PRODUCTS_DATA[9],
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
