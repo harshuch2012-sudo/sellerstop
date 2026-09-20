@@ -24,6 +24,7 @@ import { InstagramFeed } from './components/InstagramFeed';
 import { AboutSection } from './components/AboutSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { getGeneralWhatsAppUrl } from './utils/whatsapp';
 import { 
   Search, 
   Sparkles, 
@@ -31,7 +32,8 @@ import {
   Flame, 
   ShoppingBag,
   Zap,
-  Globe
+  Globe,
+  MessageCircle
 } from 'lucide-react';
 
 export default function App() {
@@ -207,40 +209,33 @@ export default function App() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="flex-1"
       >
-        {/* VIEW 1: HOME */}
+        {/* VIEW 1: HOME (Short, curated, fast-loading luxury homepage) */}
         {activeView === 'home' && (
           <div>
-            {/* 1. Hero Section */}
+            {/* 1. Flagship Hero Section */}
             <Hero
               setActiveView={setActiveView}
               openProductQuickView={handleQuickViewProduct}
               onReplayVault={handleReplayVault}
             />
 
-            {/* Live Ticker Marquee */}
+            {/* 2. Live Brand Ticker Marquee */}
             <LiveTickerMarquee />
 
-            {/* Planetary Orbit Showcase: Planet rotating with items orbiting SELLERSTOP */}
-            <PlanetOrbitShowcase
-              onViewProduct={setSelectedProduct}
-              setActiveView={setActiveView}
-            />
-
-            {/* 2. Featured Categories Section */}
-            <section className="py-16 md:py-20 border-b border-neutral-800/60 bg-neutral-950">
+            {/* 3. Featured Categories Showcase */}
+            <section className="py-14 md:py-20 border-b border-neutral-800/60 bg-neutral-950">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
-                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
+                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
                   <div>
                     <div className="inline-flex items-center gap-2 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
                       <Zap className="w-4 h-4" />
                       <span>Curated Catalog</span>
                     </div>
                     <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-                      Featured Categories
+                      Explore by Category
                     </h2>
                     <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      Explore Silk chocolates, chilled energy drinks &amp; colas, artisanal perfumes, and imported treats.
+                      From Cadbury Silk chocolates to cold energy cans and Belivita perfumes.
                     </p>
                   </div>
 
@@ -257,7 +252,7 @@ export default function App() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                  {CATEGORIES_DATA.map((cat) => (
+                  {CATEGORIES_DATA.slice(0, 6).map((cat) => (
                     <CategoryCard
                       key={cat.id}
                       category={cat}
@@ -265,30 +260,23 @@ export default function App() {
                     />
                   ))}
                 </div>
-
               </div>
             </section>
 
-            {/* Interactive Vibe & Product Matcher */}
-            <InteractiveMatcher
-              onViewProduct={setSelectedProduct}
-              onAddToInquiry={handleAddToInquiry}
-            />
-
-            {/* 3. Best Sellers Section */}
-            <section className="py-16 md:py-20 border-b border-neutral-800/60 bg-neutral-900/30">
+            {/* 4. Signature Vault Drops (Best Sellers) */}
+            <section className="py-14 md:py-20 border-b border-neutral-800/60 bg-neutral-900/30">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
+                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">
                   <div>
                     <div className="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
                       <Flame className="w-4 h-4" />
-                      <span>Most Requested by Customers</span>
+                      <span>Most Popular Drops</span>
                     </div>
                     <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
                       Best Sellers
                     </h2>
                     <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      High-demand imported favorites and viral internet sensations.
+                      Our most sought-after chocolates, energy drinks, biscuits & fragrances.
                     </p>
                   </div>
 
@@ -318,7 +306,7 @@ export default function App() {
               </div>
             </section>
 
-            {/* 4. Belivita Perfumes Spotlight */}
+            {/* 5. Belivita Luxury Perfumes Spotlight */}
             <BelivitaSpotlight
               products={PRODUCTS_DATA}
               onViewProduct={setSelectedProduct}
@@ -330,109 +318,53 @@ export default function App() {
               }}
             />
 
-            {/* Curator Thoughts & Philosophy Section */}
-            <CuratorThoughts />
-
-            {/* 5. Luxury Perfumes Section */}
-            <section className="py-16 md:py-20 border-b border-neutral-800/60 bg-neutral-950">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
-                  <div>
-                    <div className="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-                      <Sparkles className="w-4 h-4" />
-                      <span>Artisanal Extrait De Parfum</span>
-                    </div>
-                    <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-                      Luxury Perfumes
-                    </h2>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      Designer decants, Eau de Parfums & Middle-Eastern ouds with magnetic 16+ hour sillage.
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => handleSelectCategory('perfumes')}
-                    className="text-xs sm:text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors"
-                  >
-                    <span>Explore Luxury Perfumes</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {luxuryPerfumeProducts.slice(0, 4).map((product) => (
-                    <ProductCard
-                      key={product.id}
-                      product={product}
-                      onViewProduct={setSelectedProduct}
-                      onAddToInquiry={handleAddToInquiry}
-                      isInInquiry={inquiryItemIds.includes(product.id)}
-                    />
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* 6. Trending Products Section */}
-            <section className="py-16 md:py-20 border-b border-neutral-800/60 bg-neutral-900/30">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-10">
-                  <div>
-                    <div className="inline-flex items-center gap-1.5 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
-                      <Flame className="w-4 h-4" />
-                      <span>Social Media Sensation</span>
-                    </div>
-                    <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
-                      Trending Products
-                    </h2>
-                    <p className="text-xs sm:text-sm text-neutral-400 mt-1">
-                      Viral goods everyone is unboxing—order yours directly today.
-                    </p>
-                  </div>
-
-                  <button
-                    onClick={() => handleSelectCategory('trending')}
-                    className="text-xs sm:text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1 transition-colors"
-                  >
-                    <span>View Trending</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </button>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {trendingProducts.slice(0, 4).map((product) => (
-                    <ProductCard
-                      key={product.id}
-                      product={product}
-                      onViewProduct={setSelectedProduct}
-                      onAddToInquiry={handleAddToInquiry}
-                      isInInquiry={inquiryItemIds.includes(product.id)}
-                    />
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            {/* 7. Why SELLERSTOP */}
+            {/* 6. Why SELLERSTOP (The 4 Pillars) */}
             <WhySellerstop />
 
-            {/* Authenticity & Pan-India Dispatch Timeline */}
-            <AuthenticityTimeline />
+            {/* 7. Direct WhatsApp Concierge & Custom Sourcing Banner */}
+            <section className="py-14 md:py-18 bg-gradient-to-b from-neutral-950 via-neutral-900/60 to-neutral-950 border-t border-neutral-800/80">
+              <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-neutral-900 via-neutral-900/90 to-[#141418] border border-amber-400/30 text-center relative overflow-hidden shadow-2xl">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+                  
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider mb-4">
+                    <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                    <span>Personal Concierge & Sourcing</span>
+                  </div>
 
-            {/* Customer Stories & Verified Reviews */}
-            <CustomerStories />
+                  <h3 className="font-heading font-black text-2xl sm:text-4xl text-white tracking-tight mb-3">
+                    Looking for a Rare Drop or Custom Hamper?
+                  </h3>
 
-            {/* Frequently Asked Questions Accordion */}
-            <FAQSection />
+                  <p className="text-sm sm:text-base text-neutral-300 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
+                    Chat directly with founder Ishan Aggarwal on WhatsApp for live stock photos, custom gift curation, bulk orders, and express air dispatch across India.
+                  </p>
 
-            {/* 9. Instagram Community */}
-            <InstagramFeed />
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a
+                      href={getGeneralWhatsAppUrl("Hello Ishan, I would like to inquire about a custom order or specific product!")}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-neutral-950 font-bold text-sm sm:text-base transition-all shadow-lg shadow-emerald-500/20"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>Chat with Ishan on WhatsApp</span>
+                    </a>
 
-            {/* 10. Quick About Preview */}
-            <AboutSection />
-
-            {/* 11. Contact Section */}
-            <ContactSection />
+                    <button
+                      onClick={() => {
+                        setActiveView('shop');
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full bg-neutral-800 hover:bg-neutral-700 text-white border border-neutral-700 font-semibold text-sm sm:text-base transition-all"
+                    >
+                      <ShoppingBag className="w-4 h-4 text-amber-400" />
+                      <span>Browse Full Catalog</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
           </div>
         )}
 
@@ -665,7 +597,11 @@ export default function App() {
         {activeView === 'about' && (
           <div>
             <AboutSection />
+            <CuratorThoughts />
             <WhySellerstop />
+            <AuthenticityTimeline />
+            <CustomerStories />
+            <FAQSection />
             <InstagramFeed />
           </div>
         )}
@@ -674,7 +610,7 @@ export default function App() {
         {activeView === 'contact' && (
           <div>
             <ContactSection />
-            <AboutSection />
+            <FAQSection />
           </div>
         )}
       </motion.main>
