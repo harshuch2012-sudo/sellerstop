@@ -263,15 +263,31 @@ export const Hero: React.FC<HeroProps> = ({ setActiveView, openProductQuickView,
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
+                id="hero-planetary-orbit-btn"
+                onClick={() => {
+                  const el = document.getElementById('planet-orbit-section');
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-amber-400 border border-amber-400/40 font-bold text-sm sm:text-base transition-all shadow-lg backdrop-blur-md"
+              >
+                <Orbit className="w-4 h-4 animate-spin" style={{ animationDuration: '10s' }} />
+                <span>Planetary Orbit</span>
+              </motion.button>
+
+              <motion.button
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.98 }}
                 id="hero-explore-categories-btn"
                 onClick={() => {
                   setActiveView('categories');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-neutral-900/90 hover:bg-neutral-800 text-amber-400 border border-amber-400/40 font-bold text-sm sm:text-base transition-all shadow-lg backdrop-blur-md"
+                className="flex items-center justify-center gap-2 px-5 py-3.5 rounded-full bg-neutral-900/80 hover:bg-neutral-800 text-neutral-300 hover:text-white border border-neutral-700/60 font-semibold text-sm sm:text-base transition-all shadow-md backdrop-blur-md"
               >
                 <Zap className="w-4 h-4 text-amber-400" />
-                <span>Explore Categories</span>
+                <span>Categories</span>
               </motion.button>
 
               {onReplayVault && (

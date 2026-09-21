@@ -222,7 +222,13 @@ export default function App() {
             {/* 2. Live Brand Ticker Marquee */}
             <LiveTickerMarquee />
 
-            {/* 3. Featured Categories Showcase */}
+            {/* 3. Planetary Orbit Motion Showcase */}
+            <PlanetOrbitShowcase
+              onViewProduct={setSelectedProduct}
+              setActiveView={setActiveView}
+            />
+
+            {/* 4. Featured Categories Showcase */}
             <section className="py-14 md:py-20 border-b border-neutral-800/60 bg-neutral-950">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-8">

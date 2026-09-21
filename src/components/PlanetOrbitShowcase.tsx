@@ -24,16 +24,16 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
   onViewProduct,
   setActiveView,
 }) => {
-  // Selected 8 flagship orbiting items across Silk chocolates, colas, energy, and treats
+  // Selected 8 flagship orbiting items including Monster, Campa Boost, Dairy Milk Fruit & Nut, Fuse, 5 Star, Monaco, Good Day
   const orbitProducts = [
-    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-oreo') || PRODUCTS_DATA[0],
-    PRODUCTS_DATA.find((p) => p.id === 'campa-energy-drink') || PRODUCTS_DATA[1],
-    PRODUCTS_DATA.find((p) => p.id === 'cadbury-silk-bubbly') || PRODUCTS_DATA[2],
-    PRODUCTS_DATA.find((p) => p.id === 'coca-cola-classic') || PRODUCTS_DATA[3],
-    PRODUCTS_DATA.find((p) => p.id === 'nestle-milkybar-white-chocolate') || PRODUCTS_DATA[4],
-    PRODUCTS_DATA.find((p) => p.id === 'diet-coke-zero-sugar') || PRODUCTS_DATA[5],
-    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-mango-loco') || PRODUCTS_DATA[6],
-    PRODUCTS_DATA.find((p) => p.id === 'thailand-red-bull-krating-daeng') || PRODUCTS_DATA[7],
+    PRODUCTS_DATA.find((p) => p.id === 'monster-energy-original-classic') || PRODUCTS_DATA[0],
+    PRODUCTS_DATA.find((p) => p.id === 'monster-ultra-white') || PRODUCTS_DATA[1],
+    PRODUCTS_DATA.find((p) => p.id === 'campa-gold-boost-energy') || PRODUCTS_DATA[2],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-dairy-milk-fruit-and-nut') || PRODUCTS_DATA[3],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-5-star-chocolate') || PRODUCTS_DATA[4],
+    PRODUCTS_DATA.find((p) => p.id === 'cadbury-fuse-chocolate') || PRODUCTS_DATA[5],
+    PRODUCTS_DATA.find((p) => p.id === 'parle-monaco-salted-biscuit') || PRODUCTS_DATA[6],
+    PRODUCTS_DATA.find((p) => p.id === 'britannia-good-day-butter') || PRODUCTS_DATA[7],
   ];
 
   const [isPaused, setIsPaused] = useState(false);
@@ -55,11 +55,11 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
 
   const categories = [
     { id: 'all', label: 'All Orbits', icon: Orbit },
+    { id: 'energy-beverages', label: 'Monster, Boost & Colas', icon: Zap },
+    { id: 'silk-chocolates', label: 'Silk, Fruit & Nut, Fuse', icon: Sparkles },
+    { id: 'biscuits-bakery', label: 'Monaco, Good Day & Oreo', icon: Cookie },
+    { id: 'perfumes', label: 'Belivita Luxury Perfumes', icon: Sparkles },
     { id: 'chips-namkeen', label: "Lay's & Kurkure", icon: Flame },
-    { id: 'biscuits-bakery', label: 'Biscuits & Chai Treats', icon: Cookie },
-    { id: 'silk-chocolates', label: 'Silk & Milkybar', icon: Sparkles },
-    { id: 'chocolates-snacks', label: 'Celebrations & Munch', icon: Sparkles },
-    { id: 'energy-beverages', label: 'Energy & Colas', icon: Zap },
   ];
 
   const filteredProducts = selectedCategoryFilter === 'all' 
@@ -108,7 +108,7 @@ export const PlanetOrbitShowcase: React.FC<PlanetOrbitShowcaseProps> = ({
             transition={{ delay: 0.2 }}
             className="text-sm sm:text-base text-neutral-300 leading-relaxed font-light"
           >
-            Step into our gravitational pull. Handpicked Cadbury Silk Oreo, Silk Bubbly, Nestle Milkybar, Campa Power Energy Drink, ice-cold Coca-Cola Classic, Diet Coke, exotic Monster flavours, Thailand Red Bull &amp; Dubai Kunafa bars rotate live around the SELLERSTOP core. Hover or click any satellite to inspect.
+            Step into our gravitational pull. Handpicked Monster Original &amp; Ultra White, Campa Gold Boost, Cadbury Dairy Milk Fruit &amp; Nut, 5 Star, Fuse, Monaco, Good Day, and Belivita perfumes rotate live around the SELLERSTOP core. Hover or click any satellite to inspect.
           </motion.p>
 
           {/* Category Filter Pills to manipulate orbit */}
